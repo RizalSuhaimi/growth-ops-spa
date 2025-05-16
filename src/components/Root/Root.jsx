@@ -1,37 +1,36 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Outlet, Link } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div id="landing">
-        tango
+      <header>
+        <Link
+        to="/"
+        >
+          Home
+        </Link>
+        <div>
+          menu
+        </div>
+      </header>
+      <div>
+        <Outlet />
       </div>
-      <div id="mission">
+      <footer>
+        <div>
+          <p>Services</p>
+          <p>Works</p>
+          <p>Insights</p>
+          <p>Careers</p>
+          <p>Contact Us</p>
+        </div>
+        <div>
 
-      </div>
-      <div id="solutions">
-
-      </div>
-      <div id="results">
-
-      </div>
-      <div id="reviews">
-
-      </div>
-      <div id="clients">
-
-      </div>
-      <div id="contact">
-
-      </div>
-      <div id="footer">
-
-      </div>
+        </div>
+      </footer>
     </>
   )
 }
