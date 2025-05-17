@@ -16,7 +16,7 @@ const Root = () => {
           menu
         </div>
       </header>
-      <div className="bg-red-500 w-100">
+      <div className="bg-red-900 w-full">
         <Outlet />
       </div>
       <footer>

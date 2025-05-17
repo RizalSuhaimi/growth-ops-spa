@@ -4,6 +4,16 @@
 @theme {
     --font-display: "Montserrat", "sans-serif";
     --color-black: #010101;
+    --color-go-cyan-1: #07DDDA;
+    --color-go-cyan-2: #33FFF3;
+    --color-go-cyan-3: #98E0FF;
+    --color-go-cyan-4: #19B2A7;
+    --color-go-blue-1: #004CBA;
+    --color-go-blue-2: #96BFFD;
+    --color-go-yellow-1: #FDD196;
+    --color-go-purple-1: #9747FF;
+    --color-go-green-1: #33FF85;
+    --color-go-pink-1: #FF3366;
 }
 
 

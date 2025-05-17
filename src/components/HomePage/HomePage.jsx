@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logoUob from '../../assets/Logo-UOB.png';
+import Service from '../Service'
+import mockImage from "../../assets/MockImage.png"
+import logoUob from '../../assets/Logo-UOB.png'
 
 const HomePage = () => {
   const [count, setCount] = useState(0)
@@ -9,21 +11,116 @@ const HomePage = () => {
     <>
       <div 
       id="landing-main"
-      className="flex flex-row"
+      className="bg-red-800"
       >
-        <p>YOUR NEW-BREED,</p>
-        <p>END-TO-END</p>
-        <p>DIGITAL ALLY</p>
+        <h1 className="text-8xl font-extrabold">YOUR NEW-BREED,</h1>
+        <h1 className="text-8xl font-extrabold">END-TO-END</h1>
+        <h1 className="text-8xl font-extrabold">DIGITAL ALLY</h1>
       </div>
       <div id="mission">
         <div>
           With a focus in fusing strategy, and to build and sustain market leaders
         </div>
         <p>this is</p>
-        <h1>GrowthOps Asia</h1>
+        <h1  className="text-8xl font-extrabold">GrowthOps Asia</h1>
       </div>
       <div id="solutions">
-        <h2>WHAT WE DO</h2>
+        <h2 className="text-[5.25rem] font-extrabold">WHAT WE DO</h2>
+        <div className="flex">
+          <div>
+            <Service 
+              index={"01"}
+              title={"Performance Marketing & Analytics"} 
+              points={[
+                "Performance Media",
+                "Search Engine Optimisation",
+                "Web & App Analytics",
+                "Conversion Rate Optimisation Through Personalisation"
+              ]}
+            />
+          </div>
+          <div
+          className="w-[793px] h-[588px] bg-blue-500 overflow-hidden rounded-[1.25rem]"
+          >
+            <img 
+              className="w-full h-full object-cover"
+              src={mockImage} 
+              alt="photo of service" 
+            />
+          </div>
+        </div>
+        <div className="flex">
+          <div>
+            <Service 
+              index={"01"}
+              title={"Performance Marketing & Analytics"} 
+              points={[
+                "Performance Media",
+                "Search Engine Optimisation",
+                "Web & App Analytics",
+                "Conversion Rate Optimisation Through Personalisation"
+              ]}
+            />
+          </div>
+          <div
+          className="w-[793px] h-[588px] bg-blue-500 overflow-hidden rounded-[1.25rem]"
+          >
+            <img 
+              className="w-full h-full object-cover"
+              src={mockImage} 
+              alt="photo of service" 
+            />
+          </div>
+        </div>
+        <div className="flex">
+          <div>
+            <Service 
+              index={"01"}
+              title={"Performance Marketing & Analytics"} 
+              points={[
+                "Performance Media",
+                "Search Engine Optimisation",
+                "Web & App Analytics",
+                "Conversion Rate Optimisation Through Personalisation"
+              ]}
+            />
+          </div>
+          <div
+          className="w-[793px] h-[588px] bg-blue-500 overflow-hidden rounded-[1.25rem]"
+          >
+            <img 
+              className="w-full h-full object-cover"
+              src={mockImage} 
+              alt="photo of service" 
+            />
+          </div>
+        </div>
+        <div className="flex">
+          <div>
+            <Service 
+              index={"01"}
+              title={"Performance Marketing & Analytics"} 
+              points={[
+                "Performance Media",
+                "Search Engine Optimisation",
+                "Web & App Analytics",
+                "Conversion Rate Optimisation Through Personalisation"
+              ]}
+            />
+          </div>
+          <div
+          className="w-[793px] h-[588px] bg-blue-500 overflow-hidden rounded-[1.25rem]"
+          >
+            <img 
+              className="w-full h-full object-cover"
+              src={mockImage} 
+              alt="photo of service" 
+            />
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
       <div id="results">
         <h2>UNFORGETTABLE RESULTS</h2>
