@@ -3,9 +3,85 @@ import { Link } from 'react-router-dom'
 import Service from '../Service'
 import QuantResult from '../QuantResult'
 import mockImage from "../../assets/MockImage.png"
-import logoUob from '../../assets/Logo-UOB.png'
+
+import logoUob from "../../assets/Logo-UOB.png"
+import logoToyota from "../../assets/Logo-toyota.png"
+import logoPosb from "../../assets/Logo-posb.png"
+import logoSinglife from "../../assets/Logo-singlife.png"
+import logoAmway from "../../assets/Logo-amway.png"
+import logoFitnessFirst from "../../assets/Logo-FitnessFirst.png"
+import logoSony from "../../assets/Logo-sony.png"
+import logoXRvision from "../../assets/Logo-xrvision.png"
+import logoCrown from "../../assets/Logo-crown.png"
+import logoAIA from "../../assets/Logo-aia.png"
+import logoWWF from "../../assets/Logo-WWF.png"
+
+import logoMAS from "../../assets/Logo-malaysiaairlines.png"
+import logoMaxis from "../../assets/Logo-maxis.png"
+import logoGrab from "../../assets/Logo-grab.png"
+import logoDbs from "../../assets/Logo-dbs.png"
+import logoTreasure from "../../assets/Logo-treasure.png"
+import logoMicrosoft from "../../assets/Logo-microsoft.png"
+import logoLogitech from "../../assets/Logo-logitech.png"
+import logoDreamscape from "../../assets/Logo-dreamscapedigital.png"
+import logoStandardChartered from "../../assets/Logo-standardchartered.png"
+import logoSitebeat from "../../assets/Logo-sitebeat.png"
+import logoMizuho from "../../assets/Logo-mizuho.png"
+
+import logoCimb from "../../assets/Logo-cimb.png"
+import logoRhb from "../../assets/Logo-rhb.png"
+import logoNikkoAm from "../../assets/Logo-nikkoam.png"
+import logoMannHummel from "../../assets/Logo-mann+hummel.png"
+import logoChubb from "../../assets/Logo-chubb.png"
+import logoNtuc from "../../assets/Logo-ntuc.png"
+import logoTaylors from "../../assets/Logo-taylorsuniversity.png"
+import logoExplanade from "../../assets/Logo-explanade.png"
+import logoProton from "../../assets/Logo-proton.png"
+import logoTriumph from "../../assets/Logo-triumph.png"
 
 const HomePage = () => {
+  const clientsRow1 = [
+    logoUob,
+    logoToyota,
+    logoPosb,
+    logoSinglife,
+    logoAmway,
+    logoFitnessFirst,
+    logoSony,
+    logoXRvision,
+    logoCrown,
+    logoAIA,
+    logoWWF
+  ]
+
+  const clientsRow2 = [
+    logoMAS,
+    logoMaxis,
+    logoGrab,
+    logoDbs,
+    logoTreasure,
+    logoMicrosoft,
+    logoLogitech,
+    logoDreamscape,
+    logoStandardChartered,
+    logoSitebeat,
+    logoMizuho
+  ]
+
+  const clientsRow3 = [
+    logoCimb,
+    logoRhb,
+    logoNikkoAm,
+    logoMannHummel,
+    logoChubb,
+    logoNtuc,
+    logoTaylors,
+    logoExplanade,
+    logoProton,
+    logoTriumph,
+    logoProton
+  ]
+
   const [clientIndustry, setClientIndustry] = useState("Telco")
 
   return (
@@ -29,7 +105,11 @@ const HomePage = () => {
       id="services"
       className="bg-blue-800"
       >
-        <h3 className="text-[5.25rem] font-extrabold">WHAT WE DO</h3>
+        <h3 
+        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
+        >
+          WHAT WE DO
+        </h3>
         <div className="flex justify-between px-[5rem] py-[2rem]">
           <div
           className="flex flex-col justify-center w-[349px]"
@@ -60,7 +140,11 @@ const HomePage = () => {
       id="results"
       className="bg-red-700"
       >
-        <h3 className="text-[5.25rem] font-extrabold">UNFORGETTABLE RESULTS</h3>
+        <h3 
+        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
+        >
+          UNFORGETTABLE RESULTS
+        </h3>
         <div
         className="w-[975px] h-[843px] bg-green-900 m-auto flex justify-between"
         >
@@ -130,7 +214,7 @@ const HomePage = () => {
       className="bg-blue-700"
       >
         <h3 
-        className="text-[5.25rem] font-extrabold m-auto w-[1000px]"
+        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
         >
           WHAT CLIENTS SAY
         </h3>
@@ -189,17 +273,72 @@ const HomePage = () => {
       id="clients"
       className="bg-red-600"
       >
-        <h3 className="text-[5.25rem] font-extrabold">SUPER PROUD TO WORK WITH</h3>
-        <img src={logoUob} alt="UOB logo" />
+        <h3 
+        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
+        >
+          SUPER PROUD TO WORK WITH
+        </h3>
+        <div
+        className="w-full h-[405px] relative bg-blue-900 py-[2.875rem] overflow-"
+        >
+          <div
+          className=" w-[2080px] h-[60px] flex justify-between absolute top-[46px]"
+          >
+            {clientsRow1.map((client) => (
+              <div
+              className="h-full w-[160px]"
+              >
+                <img 
+                src={client} 
+                alt="client logo" 
+                className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+          <div
+          className="w-[2080px] h-[60px] flex justify-between absolute right-0 top-[50%] translate-y-[-50%]"
+          >
+            {clientsRow2.map((client) => (
+              <div
+              className="h-full w-[160px]"
+              >
+                <img 
+                src={client} 
+                alt="client logo" 
+                className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+          <div
+          className="w-[2080px] h-[60px] flex justify-between absolute bottom-[46px]"
+          >
+            {clientsRow3.map((client) => (
+              <div
+              className="h-full w-[160px]"
+              >
+                <img 
+                src={client} 
+                alt="client logo" 
+                className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div 
       id="contact"
-      className="bg-blue-600"
+      className="bg-blue-600 my-[15rem] w-full"
       >
         <Link
         to="/contact"
+        className="w-fit block m-auto"
         >
-          <button>
+          <button
+          className="bg-go-green-1 rounded-[3rem] py-[1rem] px-[2.5rem] m-auto "
+          >
             Let's chat
           </button>
         </Link>
