@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import {
   Route,
   BrowserRouter,
@@ -9,7 +8,7 @@ import Root from "../components/Root/Root"
 import HomePage from '../components/HomePage/HomePage'
 import Contact from "../components/Contact/Contact"
 
-function App() {
+const App = () => {
 
   return (
     <BrowserRouter>

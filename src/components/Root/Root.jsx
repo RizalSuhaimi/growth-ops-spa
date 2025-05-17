@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 
-function App() {
+const Root = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='w-[1366px] bg-black m-auto'>
       <header>
         <Link
         to="/"
@@ -16,12 +16,12 @@ function App() {
           menu
         </div>
       </header>
-      <div>
+      <div className="bg-red-500 w-100">
         <Outlet />
       </div>
       <footer>
         <div>
-          <p>Services</p>
+          <p className="">Services</p>
           <p>Works</p>
           <p>Insights</p>
           <p>Careers</p>
@@ -31,8 +31,8 @@ function App() {
 
         </div>
       </footer>
-    </>
+    </div>
   )
 }
 
-export default App
+export default Root

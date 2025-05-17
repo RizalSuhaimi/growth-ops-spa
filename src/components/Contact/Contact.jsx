@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function App() {
+const Contact = () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default Contact
