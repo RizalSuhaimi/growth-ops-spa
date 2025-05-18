@@ -5,23 +5,36 @@ import InstagramIcon from "../../assets/Logo-instagram.svg"
 import FacebookIcon from "../../assets/Logo-facebook.svg"
 import LinkedInIcon from "../../assets/Logo-linkedin.svg"
 import YouTubeIcon from "../../assets/Logo-youtube.svg"
+import goLogo from "../../assets/GOLogo.svg"
+import bars from "../../assets/bars.svg"
 
 const Root = () => {
 
   return (
     <div 
-    className='w-[1366px] bg-black m-auto pb-[4.25rem] overflow-hidden'
+    className='w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden'
     >
       <header
-      className="border-2 border-go-white-2/8 rounded-[4rem] w-[1270px] h-[69px]"
+      className="border-2 border-go-white-2/8 rounded-[4rem] w-[1270px] h-[69px] flex justify-between items-center py-[15px] px-[2rem] mx-auto my-10"
       >
         <Link
         to="/"
         >
-          Home
+          <img src={goLogo} alt="Open In New" className=""/>
         </Link>
-        <button>
-          menu
+        <button
+        className="flex items-center gap-x-[0.5rem]"
+        >
+          <p
+          className="text-sm font-bold"
+          >
+            MENU
+          </p>
+          <div
+          className="size-[2.5rem] flex"
+          >
+            <img src={bars} alt="menu" className="m-auto"/>
+          </div>
         </button>
       </header>
       <div className="bg-red-900 w-full">

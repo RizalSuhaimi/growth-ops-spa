@@ -20,4 +20,27 @@
     --color-go-white-2: #F5F5F5;
 }
 
+#anim {
+    font-family: "Montserrat";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #33FFF3;
+    width: 1366px;
+    height: 768px;
+    padding: 337px 5rem 199px;
+    transform: translate(-50%, -50%);
+    animation: moveUpOut 1.5s linear forwards;
+    animation-delay: 2s; 
+}
 
+@keyframes moveUpOut {
+    0% {
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+    100% {
+        transform: translate(-50%, -165%);
+        display: hidden;
+    }
+}

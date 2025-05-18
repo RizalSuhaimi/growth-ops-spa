@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { createPortal } from 'react-dom'
+
 import Service from '../Service'
 import QuantResult from '../QuantResult'
 import mockImage from "../../assets/MockImage.png"
@@ -84,8 +86,42 @@ const HomePage = () => {
 
   const [clientIndustry, setClientIndustry] = useState("Telco")
 
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <>
+      {/* This part is fixed and centered via portal  */}
+      {/* fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  */}
+      {mounted && createPortal(
+        <div 
+        id="anim"
+        // className="font-display bg-go-cyan-2 w-[1366px] h-[768px] px-[5rem] pt-[337px] pb-[199px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-move-up-out"
+        >
+          <div
+          className="flex items-end w-[1206px] "
+          >
+            <h1
+            className="text-9xl font-extrabold text-white"
+            >
+              We’re GrowthOps
+            </h1>
+            <h2
+            className="bg-white text-go-cyan-2 text-8xl font-extrabold py-[1.25rem] px-[4rem] w-fit h-fit rounded-[5rem] rotate-z-[-9.47deg] mx-[25.05px]"
+            >
+              Asia
+            </h2>
+          </div>
+        </div>,
+        document.body
+      )}
+
+      {/* This part flows with the DOM */}
+
+      
       <div 
       id="landing-main"
       className="bg-red-800"
