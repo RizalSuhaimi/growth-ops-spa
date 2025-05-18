@@ -169,26 +169,34 @@ const HomePage = () => {
             this is
           </p>
           
-          <h2  className="text-8xl font-extrabold text-center">GrowthOps Asia</h2>
+          <h2 
+          className="
+          text-[5rem] lg:text-8xl 
+          font-extrabold 
+          text-center
+          "
+          >
+            GrowthOps Asia
+          </h2>
         </div>
         <div 
         id="services"
         className=""
         >
           <h3 
-          className="text-[5.5rem]/[5.25rem] font-extrabold w-[1000px] text-center pb-[3.5rem] mx-auto"
+          className="text-[35px]/[2.5rem] sm:text-[3.875rem]/[2.5rem] lg:text-[5.5rem]/[5.25rem] font-extrabold  text-center pb-[3.5rem] mx-auto"
           >
             WHAT WE DO
           </h3>
           <div 
           className="
           flex 
-          flex-col-reverse xl:flex-row 
+          flex-col-reverse 1366:flex-row
           justify-between 
           items-center 
           gap-y-[1.5rem] 
           max-w-[87%] 
-          mx-auto xl:mx-[5rem] 
+          mx-auto 1366:mx-[5rem] 
           py-[2rem]
           "
           >
@@ -197,7 +205,7 @@ const HomePage = () => {
             flex 
             flex-col 
             justify-center 
-            w-full 926:w-[793px] xl:w-[349px] 
+            w-full 926:w-[793px] 1366:w-[349px] 
             mx-auto
             "
             >
@@ -230,12 +238,12 @@ const HomePage = () => {
           <div 
           className="
           flex 
-          flex-col-reverse xl:flex-row-reverse 
+          flex-col-reverse 1366:flex-row-reverse 
           justify-between 
           items-center 
           gap-y-[1.5rem] 
           max-w-[87%] 
-          mx-auto xl:mx-[5rem] 
+          mx-auto 1366:mx-[5rem] 
           py-[2rem]
           "
           >
@@ -244,7 +252,7 @@ const HomePage = () => {
             flex 
             flex-col 
             justify-center 
-            w-full 926:w-[793px] xl:w-[349px] 
+            w-full 926:w-[793px] 1366:w-[349px] 
             mx-auto
             "
             >
@@ -276,12 +284,12 @@ const HomePage = () => {
           <div 
           className="
           flex 
-          flex-col-reverse xl:flex-row 
+          flex-col-reverse 1366:flex-row 
           justify-between 
           items-center 
           gap-y-[1.5rem] 
           max-w-[87%] 
-          mx-auto xl:mx-[5rem] 
+          mx-auto 1366:mx-[5rem] 
           py-[2rem]
           ">
             <div
@@ -289,7 +297,7 @@ const HomePage = () => {
             flex 
             flex-col 
             justify-center 
-            w-full 926:w-[793px] xl:w-[349px] 
+            w-full 926:w-[793px] 1366:w-[349px] 
             mx-auto
             "
             >
@@ -323,12 +331,12 @@ const HomePage = () => {
           <div 
           className="
           flex 
-          flex-col-reverse xl:flex-row-reverse 
+          flex-col-reverse 1366:flex-row-reverse 
           justify-between 
           items-center 
           gap-y-[1.5rem] 
           max-w-[87%] 
-          mx-auto xl:mx-[5rem] 
+          mx-auto 1366:mx-[5rem] 
           py-[2rem]
           "
           >
@@ -337,7 +345,7 @@ const HomePage = () => {
             flex 
             flex-col 
             justify-center 
-            w-full 926:w-[793px] xl:w-[349px] 
+            w-full 926:w-[793px] 1366:w-[349px] 
             mx-auto
             "
             >
