@@ -134,31 +134,72 @@ const HomePage = () => {
 
         </div>
       </div>
-      <div id="fliparoo">
+      <div 
+      id="fliparoo"
+      className="mt-[62px] mb-[240px] flex flex-col-reverse sm:flex-col gap-y-[244px]"
+      >
         <div 
         id="mission"
-        className="bg-red-900"
+        className=""
         >
           <div
-          className="text-[2rem] font-medium pt-[62px] w-[569px] mx-auto"
+          className="text-[2rem] font-medium w-[569px] mx-auto text-center"
           >
-            With a focus in fusing <span className="text-go-cyan-2">strategy</span>, <span className="text-go-cyan-2">design</span> and <span className="text-go-cyan-2">&lt;technology/&gt;</span> to build and sustain market leaders
+            <p className="inline">With a focus in fusing </p>
+            <span className="text-go-cyan-2">strategy, </span>
+            {/* <span className="text-go-cyan-2 border-1 border-go-cyan-2 py-[14px] px-[1rem]">design</span> */}
+            <div className="relative inline-block">
+              <span className="text-[2rem]/[1.5rem] text-go-cyan-2 border border-go-cyan-2 py-[6px] px-[1rem]">
+                design
+              </span>
+
+              {/* Corner squares */}
+              <div className="absolute top-[-2px] left-0 transform translate-x-[-50%] translate-y-[-50%] w-[8px] h-[8px] border border-go-cyan-2 bg-black"></div>
+              <div className="absolute top-[-2px] right-0 transform translate-x-[50%] translate-y-[-50%] w-[8px] h-[8px] border border-go-cyan-2 bg-black"></div>
+              <div className="absolute bottom-[-2px] left-0 transform translate-x-[-50%] translate-y-[50%] w-[8px] h-[8px] border border-go-cyan-2 bg-black"></div>
+              <div className="absolute bottom-[-2px] right-0 transform translate-x-[50%] translate-y-[50%] w-[8px] h-[8px] border border-go-cyan-2 bg-black"></div>
+            </div>
+            <p className="inline"> and </p>
+            <span className="text-go-cyan-2 font-scp">&lt;technology/&gt;</span>
+            <p className="inline"> to build and sustain market leaders</p>
           </div>
-          <p>this is</p>
-          <h2  className="text-8xl font-extrabold">GrowthOps Asia</h2>
+          <p
+          className="text-[2rem] font-medium mt-[82px] mb-[62px] text-center"
+          >
+            this is
+          </p>
+          
+          <h2  className="text-8xl font-extrabold text-center">GrowthOps Asia</h2>
         </div>
         <div 
         id="services"
-        className="bg-blue-800"
+        className=""
         >
           <h3 
-          className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
+          className="text-[5.5rem]/[5.25rem] font-extrabold w-[1000px] text-center pb-[3.5rem] mx-auto"
           >
             WHAT WE DO
           </h3>
-          <div className="flex justify-between px-[5rem] py-[2rem]">
+          <div 
+          className="
+          flex 
+          flex-col-reverse xl:flex-row 
+          justify-between 
+          items-center 
+          gap-y-[1.5rem] 
+          max-w-[87%] 
+          mx-auto xl:mx-[5rem] 
+          py-[2rem]
+          "
+          >
             <div
-            className="flex flex-col justify-center w-[349px]"
+            className="
+            flex 
+            flex-col 
+            justify-center 
+            w-full 926:w-[793px] xl:w-[349px] 
+            mx-auto
+            "
             >
               <Service 
                 index={"01"}
@@ -172,7 +213,150 @@ const HomePage = () => {
               />
             </div>
             <div
-            className="w-[793px] h-[588px] bg-green-500 overflow-hidden rounded-[1.25rem]"
+            className="
+            w-full 926:w-[793px] 
+            h-fit 926:h-[588px] 
+            overflow-hidden 
+            rounded-[1.25rem]
+            "
+            >
+              <img 
+                className="w-full h-full object-contain 926:object-cover"
+                src={mockImage} 
+                alt="photo of service" 
+              />
+            </div>
+          </div>
+          <div 
+          className="
+          flex 
+          flex-col-reverse xl:flex-row-reverse 
+          justify-between 
+          items-center 
+          gap-y-[1.5rem] 
+          max-w-[87%] 
+          mx-auto xl:mx-[5rem] 
+          py-[2rem]
+          "
+          >
+            <div
+            className="
+            flex 
+            flex-col 
+            justify-center 
+            w-full 926:w-[793px] xl:w-[349px] 
+            mx-auto
+            "
+            >
+              <Service 
+                index={"02"}
+                title={"Digital-First Creative"} 
+                points={[
+                  "Brand & Marketing Strategy",
+                  "Content Hubs",
+                  "Creative Services"
+                ]}
+              />
+            </div>
+            <div
+            className="
+            w-full 926:w-[793px] 
+            h-fit 926:h-[588px] 
+            overflow-hidden 
+            rounded-[1.25rem]
+            "
+            >
+              <img 
+                className="w-full h-full object-cover"
+                src={mockImage} 
+                alt="photo of service" 
+              />
+            </div>
+          </div>
+          <div 
+          className="
+          flex 
+          flex-col-reverse xl:flex-row 
+          justify-between 
+          items-center 
+          gap-y-[1.5rem] 
+          max-w-[87%] 
+          mx-auto xl:mx-[5rem] 
+          py-[2rem]
+          ">
+            <div
+            className="
+            flex 
+            flex-col 
+            justify-center 
+            w-full 926:w-[793px] xl:w-[349px] 
+            mx-auto
+            "
+            >
+              <Service 
+                index={"03"}
+                title={"Marketing Technology"} 
+                points={[
+                  "Technology Consulting",
+                  "MarTech Deployment & Partnerships",
+                  "Mobile Development",
+                  "Custom Web Development",
+                  "Solution Architecture"
+                ]}
+              />
+            </div>
+            <div
+            className="
+            w-full 926:w-[793px] 
+            h-fit 926:h-[588px] 
+            overflow-hidden 
+            rounded-[1.25rem]
+            "
+            >
+              <img 
+                className="w-full h-full object-cover"
+                src={mockImage} 
+                alt="photo of service" 
+              />
+            </div>
+          </div>
+          <div 
+          className="
+          flex 
+          flex-col-reverse xl:flex-row-reverse 
+          justify-between 
+          items-center 
+          gap-y-[1.5rem] 
+          max-w-[87%] 
+          mx-auto xl:mx-[5rem] 
+          py-[2rem]
+          "
+          >
+            <div
+            className="
+            flex 
+            flex-col 
+            justify-center 
+            w-full 926:w-[793px] xl:w-[349px] 
+            mx-auto
+            "
+            >
+              <Service 
+                index={"04"}
+                title={"Experience Design & Strategy"} 
+                points={[
+                  "Digital Transformation & Change Management",
+                  "User Experience Strategy and Design"
+                ]}
+              />
+            </div>
+            <div
+            className="
+            w-full 926:w-[793px] 
+            h-fit 926:h-[588px] 
+            overflow-hidden 
+            rounded-[1.25rem]
+            "
             >
               <img 
                 className="w-full h-full object-cover"
@@ -186,7 +370,7 @@ const HomePage = () => {
       
       <div 
       id="results"
-      className="bg-red-700"
+      className=""
       >
         <h3 
         className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
@@ -194,66 +378,91 @@ const HomePage = () => {
           UNFORGETTABLE RESULTS
         </h3>
         <div
-        className="w-[975px] h-[843px] bg-green-900 m-auto flex justify-between"
-        >
+        className="w-[975px] h-[843px] m-auto relative"
+        >  
           <div
-          className="flex flex-col justify-between h-full"
+          className="w-[356px] absolute top-0"
           >
-            <div
-            className="w-[356px] bg-black"
+            <QuantResult percentage={"400"} text={"INCREASE IN ORGANIC PAGE VIEWS"}/>
+            <p
+            className="text-sm text-go-gray-2 mt-[0.5rem]"
             >
-              <QuantResult percentage={"400"} text={"INCREASE IN ORGANIC PAGE VIEWS"}/>
-              <p
-              className="text-sm text-go-gray-2"
-              >
-                Using our SEO services, it also resulted in a <span className="font-bold">109% increase in page visibility</span>
-              </p>
-            </div>
-            <div
-            className="w-[356px]"
-            >
-              <QuantResult percentage={"400"} text={"INCREASE IN ORGANIC PAGE VIEWS"}/>
-              <p
-              className="text-sm"
-              >
-                Using our SEO services, it also resulted in a 109% increase in page visibility
-              </p>
-            </div>
-            <div
-            className="w-[356px]"
-            >
-              <QuantResult percentage={"400"} text={"INCREASE IN ORGANIC PAGE VIEWS"}/>
-              <p
-              className="text-sm"
-              >
-                Using our SEO services, it also resulted in a 109% increase in page visibility
-              </p>
-            </div>
-              
+              Using our SEO services, it also resulted in a <span className="font-bold">109% increase in page visibility</span>
+            </p>
           </div>
           <div
-          className="flex flex-col justify-around h-full"
+          className="w-[356px] absolute top-[33%] right-0 transform translate-y-[-50%]"
           >
-            <div
-            className="w-[356px] bg-black"
+            <QuantResult percentage={"4.5"} text={"INCREASE IN SALES"}/>
+            <p
+            className="text-sm text-go-gray-2 mt-[0.5rem]"
             >
-              <QuantResult percentage={"400"} text={"INCREASE IN ORGANIC PAGE VIEWS"}/>
-              <p
-              className="text-sm"
-              >
-                Using our SEO services, it also resulted in a <span className="font-bold">109% increase in page visibility</span>
-              </p>
-            </div>
-            <div
-            className="w-[356px]"
+              Through our creative services, a national automaker experienced a <span className="font-bold">4.5% increase in sales amidst a -4.6% market decline.</span> They also had a <span className="font-bold">2% increase in market share,</span> and a <span className="font-bold">5.6 point shift in brand perception</span>
+            </p>
+          </div>
+          <div
+          className="w-[356px] absolute top-[50%] transform translate-y-[-50%]"
+          >
+            <QuantResult percentage={"96"} text={"FASTER PAGE LAUNCHES"}/>
+            <p
+            className="text-sm text-go-gray-2 mt-[0.5rem] mb-[21px]"
             >
-              <QuantResult percentage={"400"} text={"INCREASE IN ORGANIC PAGE VIEWS"}/>
-              <p
-              className="text-sm"
+              Using AEM, a leading Telco saw these results
+            </p>
+            <div
+            className="h-[2.5rem]">
+              <div
+              className="w-[277px] h-[2.5rem] rounded-[0.25rem] bg-go-cyan-1 opacity-20"
               >
-                Using our SEO services, it also resulted in a 109% increase in page visibility
-              </p>
+              </div>
+              <div
+                className="w-[79px] h-[2.5rem] rounded-[0.25rem] bg-go-cyan-1 relative top-[-2.5rem]"
+              >
+              </div>
             </div>
+            <p
+            className="text-sm text-go-gray-2 mt-[0.75rem] mb-[1.125rem]"
+            >
+              Campaign launches cut from <span className="font-bold">7 days to 2 days</span>
+            </p>
+            <div
+            className="h-[2.5rem]">
+              <div
+              className="w-[277px] h-[2.5rem] rounded-[0.25rem] bg-go-cyan-1 opacity-20"
+              >
+              </div>
+              <div
+                className="w-[11px] h-[2.5rem] rounded-[0.25rem] bg-go-cyan-1 relative top-[-2.5rem]"
+              >
+              </div>
+            </div>
+            <p
+            className="text-sm text-go-gray-2 mt-[0.625rem]"
+            >
+              Page launches cut from <span className="font-bold">2 days to 2 hours</span>
+            </p>
+          </div>
+            
+        
+          <div
+          className="w-[356px] absolute top-[66%] right-0 transform translate-y-[-50%]"
+          >
+            <QuantResult percentage={"71"} text={"REDUCTION IN CPL"}/>
+            <p
+            className="text-sm text-go-gray-2 mt-[0.5rem]"
+            >
+              After optimising the performance media funnel, a leading bank saw <span className="font-bold">savings over AUD$300 in the first year</span>
+            </p>
+          </div>
+          <div
+          className="w-[356px] absolute bottom-0"
+          >
+            <QuantResult percentage={"38"} text={"CONVERSION RATE IMPROVEMENT"}/>
+            <p
+            className="text-sm text-go-gray-2 mt-[0.5rem]"
+            >
+              Using Adobe Target to A/B test landing pages’ forms, we saw an <span className="font-bold">increase in conversion rate</span>
+            </p>
           </div>
         </div>
       </div>

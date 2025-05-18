@@ -14,10 +14,10 @@ const Root = () => {
 
   return (
     <div 
-    className='w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden relative'
+    className='w-full 1366:w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden relative'
     >
       <header
-      className="bg-black border-2 border-go-white-2/8 rounded-[4rem] w-[1270px] h-[69px] flex justify-between items-center py-[15px] px-[2rem] mx-auto mb-[1.375rem] relative z-50"
+      className="bg-black border-2 border-go-white-2/8 rounded-[4rem] w-[93%] 1366:w-[1270px] h-[69px] flex justify-between items-center py-[15px] px-[2rem] mx-auto mb-[1.375rem] relative z-50"
       >
         <Link
         to="/"

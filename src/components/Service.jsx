@@ -7,12 +7,20 @@ const Service = ({index, title, points}) => {
       <div className="text-xl font-semibold size-[48px] border-2 rounded-full flex justify-center items-center">
           {index}
       </div>
-      <h4 className="text-[2.5rem] font-extrabold">{title}</h4>
+      <h4 
+      className="text-[1.5rem] sm:text-[2.5rem]/[100%] font-extrabold py-[1.5rem]"
+      >
+        {title}
+      </h4>
       {points.map((point) => (
-        <p>{point}</p>
+        <p
+        className="pb-[1rem]"
+        >
+          {point}
+        </p>
       ))}
       <button
-      className="w-[121px] h-[41px] border-1 rounded-[48px] text-sm font-extrabold hover:bg-gray-900"
+      className="w-[121px] h-[41px] border-1 rounded-[48px] mt-[0.5rem] text-sm font-extrabold hover:bg-gray-900"
       >
         See more
       </button>
