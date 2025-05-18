@@ -95,11 +95,9 @@ const HomePage = () => {
   return (
     <>
       {/* This part is fixed and centered via portal  */}
-      {/* fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  */}
       {mounted && createPortal(
         <div 
         id="anim"
-        // className="font-display bg-go-cyan-2 w-[1366px] h-[768px] px-[5rem] pt-[337px] pb-[199px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-move-up-out"
         >
           <div
           className="flex items-end w-[1206px] "
@@ -120,58 +118,72 @@ const HomePage = () => {
       )}
 
       {/* This part flows with the DOM */}
-
-      
       <div 
       id="landing-main"
-      className="bg-red-800"
+      className=" relative z-0"
       >
-        <h2 className="text-8xl font-extrabold">YOUR NEW-BREED,</h2>
-        <h2 className="text-8xl font-extrabold">END-TO-END</h2>
-        <h2 className="text-8xl font-extrabold">DIGITAL ALLY</h2>
-      </div>
-      <div id="mission">
-        <div>
-          With a focus in fusing strategy, and to build and sustain market leaders
-        </div>
-        <p>this is</p>
-        <h2  className="text-8xl font-extrabold">GrowthOps Asia</h2>
-      </div>
-      <div 
-      id="services"
-      className="bg-blue-800"
-      >
-        <h3 
-        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
+        <div
+        className="px-[5rem] py-[130px] relative z-0"
         >
-          WHAT WE DO
-        </h3>
-        <div className="flex justify-between px-[5rem] py-[2rem]">
+          <h2 className="text-8xl font-extrabold">YOUR NEW-BREED,</h2>
+          <h2 className="text-8xl font-extrabold text-end my-[1.75rem]">END-TO-END</h2>
+          <h2 className="text-8xl font-extrabold ps-[103px]">DIGITAL ALLY</h2>
+        </div>
+        <div
+        className="h-[519px]  bg-gradient-to-t from-black ">
+
+        </div>
+      </div>
+      <div id="fliparoo">
+        <div 
+        id="mission"
+        className="bg-red-900"
+        >
           <div
-          className="flex flex-col justify-center w-[349px]"
+          className="text-[2rem] font-medium pt-[62px] w-[569px] mx-auto"
           >
-            <Service 
-              index={"01"}
-              title={"Performance Marketing & Analytics"} 
-              points={[
-                "Performance Media",
-                "Search Engine Optimisation",
-                "Web & App Analytics",
-                "Conversion Rate Optimisation Through Personalisation"
-              ]}
-            />
+            With a focus in fusing <span className="text-go-cyan-2">strategy</span>, <span className="text-go-cyan-2">design</span> and <span className="text-go-cyan-2">&lt;technology/&gt;</span> to build and sustain market leaders
           </div>
-          <div
-          className="w-[793px] h-[588px] bg-green-500 overflow-hidden rounded-[1.25rem]"
+          <p>this is</p>
+          <h2  className="text-8xl font-extrabold">GrowthOps Asia</h2>
+        </div>
+        <div 
+        id="services"
+        className="bg-blue-800"
+        >
+          <h3 
+          className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
           >
-            <img 
-              className="w-full h-full object-cover"
-              src={mockImage} 
-              alt="photo of service" 
-            />
+            WHAT WE DO
+          </h3>
+          <div className="flex justify-between px-[5rem] py-[2rem]">
+            <div
+            className="flex flex-col justify-center w-[349px]"
+            >
+              <Service 
+                index={"01"}
+                title={"Performance Marketing & Analytics"} 
+                points={[
+                  "Performance Media",
+                  "Search Engine Optimisation",
+                  "Web & App Analytics",
+                  "Conversion Rate Optimisation Through Personalisation"
+                ]}
+              />
+            </div>
+            <div
+            className="w-[793px] h-[588px] bg-green-500 overflow-hidden rounded-[1.25rem]"
+            >
+              <img 
+                className="w-full h-full object-cover"
+                src={mockImage} 
+                alt="photo of service" 
+              />
+            </div>
           </div>
         </div>
       </div>
+      
       <div 
       id="results"
       className="bg-red-700"

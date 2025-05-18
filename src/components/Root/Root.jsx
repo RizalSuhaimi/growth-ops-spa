@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, useLocation } from 'react-router-dom'
 import OpenInNewIcon from "../../assets/open_in_new.svg"
 import InstagramIcon from "../../assets/Logo-instagram.svg"
 import FacebookIcon from "../../assets/Logo-facebook.svg"
@@ -9,13 +9,15 @@ import goLogo from "../../assets/GOLogo.svg"
 import bars from "../../assets/bars.svg"
 
 const Root = () => {
+  const location = useLocation()
+  const isHomePage = location.pathname === "/"
 
   return (
     <div 
-    className='w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden'
+    className='w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden relative'
     >
       <header
-      className="border-2 border-go-white-2/8 rounded-[4rem] w-[1270px] h-[69px] flex justify-between items-center py-[15px] px-[2rem] mx-auto my-10"
+      className="bg-black border-2 border-go-white-2/8 rounded-[4rem] w-[1270px] h-[69px] flex justify-between items-center py-[15px] px-[2rem] mx-auto mb-[1.375rem] relative z-50"
       >
         <Link
         to="/"
@@ -37,7 +39,31 @@ const Root = () => {
           </div>
         </button>
       </header>
-      <div className="bg-red-900 w-full">
+      {isHomePage && (
+        <div id="rings">
+          <div
+          className="ring1 border-1 rounded-full size-[373.82px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          </div>
+          <div
+          className="ring2 border-1 rounded-full size-[607.45px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          </div>
+          <div
+          className="ring3 border-1 rounded-full size-[841.09px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          </div>
+          <div
+          className="ring4 border-1 rounded-full size-[1098.09px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          </div>
+          <div
+          className="ring5 border-1 rounded-full size-[1331.73px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          </div>
+          <div
+          className="ring6 border-1 rounded-full size-[1542px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          </div>
+        </div>
+      )}
+      
+      
+      <div className=" w-full">
         <Outlet />
       </div>
       <footer

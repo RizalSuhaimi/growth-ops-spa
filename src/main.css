@@ -32,6 +32,7 @@
     transform: translate(-50%, -50%);
     animation: moveUpOut 1.5s linear forwards;
     animation-delay: 2s; 
+    display: none;
 }
 
 @keyframes moveUpOut {
@@ -41,6 +42,110 @@
     }
     100% {
         transform: translate(-50%, -165%);
-        display: hidden;
+        display: none;
+    }
+}
+
+.ring1 {
+    border-color: #FFFBFC;
+    opacity: 0.1;
+    animation: pulseRing1 3.5s linear 0s infinite
+}
+
+@keyframes pulseRing1 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.ring2 {
+    border-color: #FFFBFC;
+    opacity: 0.1;
+    animation: pulseRing2 3.5s linear 0.7s infinite
+}
+
+@keyframes pulseRing2 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring3 {
+    border-color: #FFFBFC;
+    opacity: 0.1;
+    animation: pulseRing3 3.5s linear 1.4s infinite
+}
+
+@keyframes pulseRing3 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring4 {
+    border-color: #FFFBFC;
+    opacity: 0.1;
+    animation: pulseRing4 3.5s linear 2.1s infinite
+}
+
+@keyframes pulseRing4 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring5 {
+    border-color: #FFFBFC;
+    opacity: 0.1;
+    animation: pulseRing5 3.5s linear 2.8s infinite
+}
+
+@keyframes pulseRing5 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring6 {
+    border-color: #FFFBFC;
+    opacity: 0.1;
+    animation: pulseRing6 3.5s linear 3.5s infinite
+}
+
+@keyframes pulseRing6 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
     }
 }
