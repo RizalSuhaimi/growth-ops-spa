@@ -136,20 +136,37 @@ const HomePage = () => {
       </div>
       <div 
       id="fliparoo"
-      className="mt-[62px] mb-[240px] flex flex-col-reverse sm:flex-col gap-y-[244px]"
+      className="
+      mt-[62px] mb-[240px] 
+      flex flex-col CHANGETHIS sm:flex-col 
+      gap-y-[244px]
+      "
       >
         <div 
         id="mission"
         className=""
         >
           <div
-          className="text-[2rem] font-medium w-[569px] mx-auto text-center"
+          className="
+          text-[1.25rem] md:text-[2rem] 
+          font-medium 
+          w-[375px] md:w-[569px] 
+          mx-auto 
+          text-center
+          "
           >
             <p className="inline">With a focus in fusing </p>
             <span className="text-go-cyan-2">strategy, </span>
             {/* <span className="text-go-cyan-2 border-1 border-go-cyan-2 py-[14px] px-[1rem]">design</span> */}
             <div className="relative inline-block">
-              <span className="text-[2rem]/[1.5rem] text-go-cyan-2 border border-go-cyan-2 py-[6px] px-[1rem]">
+              <span 
+              className="
+              text-[1.25rem]/[1.5rem] md:text-[2rem]/[1.5rem] 
+              text-go-cyan-2 
+              border border-go-cyan-2 
+              py-[6px] px-[1rem]
+              "
+              >
                 design
               </span>
 
@@ -164,14 +181,19 @@ const HomePage = () => {
             <p className="inline"> to build and sustain market leaders</p>
           </div>
           <p
-          className="text-[2rem] font-medium mt-[82px] mb-[62px] text-center"
+          className="
+          text-[1.25rem] md:text-[2rem]
+          font-medium 
+          mt-[82px] mb-[62px] 
+          text-center
+          "
           >
             this is
           </p>
           
           <h2 
           className="
-          text-[5rem] lg:text-8xl 
+          text-[2.25rem] sm:text-[3.5rem] md:text-[5rem] lg:text-8xl 
           font-extrabold 
           text-center
           "
@@ -184,7 +206,13 @@ const HomePage = () => {
         className=""
         >
           <h3 
-          className="text-[35px]/[2.5rem] sm:text-[3.875rem]/[2.5rem] lg:text-[5.5rem]/[5.25rem] font-extrabold  text-center pb-[3.5rem] mx-auto"
+          className="
+          text-[35px]/[2.5rem] sm:text-[2.75rem]/[2.5rem] md:text-[3.875rem]/[2.5rem]  lg:text-[5.5rem]/[5.25rem] 
+          font-extrabold 
+          text-center 
+          pb-[3.5rem] 
+          mx-auto
+          "
           >
             WHAT WE DO
           </h3>
