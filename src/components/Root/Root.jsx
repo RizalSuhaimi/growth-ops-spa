@@ -14,7 +14,7 @@ const Root = () => {
 
   return (
     <div 
-    className='w-full 1366:w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden relative'
+    className='w-full 1386:w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden relative'
     >
       <header
       className="bg-black border-2 border-go-white-2/8 rounded-[4rem] w-[93%] 1366:w-[1270px] h-[69px] flex justify-between items-center py-[15px] px-[2rem] mx-auto mb-[1.375rem] relative z-50"
@@ -42,22 +42,22 @@ const Root = () => {
       {isHomePage && (
         <div id="rings">
           <div
-          className="ring1 border-1 rounded-full size-[373.82px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          className="ring1 border-go-pink-1 md:border-go-white-3 border-1 rounded-full size-[373.82px] absolute top-[399px] left-1/2 transform translate-[-50%] z-10">
           </div>
           <div
-          className="ring2 border-1 rounded-full size-[607.45px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          className="ring2 border-go-pink-1 md:border-go-white-3 border-1 rounded-full size-[607.45px] absolute top-[399px] left-1/2 transform translate-[-50%] z-10">
           </div>
           <div
-          className="ring3 border-1 rounded-full size-[841.09px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          className="ring3 border-go-pink-1 md:border-go-white-3 border-1 rounded-full size-[841.09px] absolute top-[399px] left-1/2 transform translate-[-50%] z-10">
           </div>
           <div
-          className="ring4 border-1 rounded-full size-[1098.09px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          className="ring4 border-go-pink-1 md:border-go-white-3 border-1 rounded-full size-[1098.09px] absolute top-[399px] left-1/2 transform translate-[-50%] z-10 hidden md:block">
           </div>
           <div
-          className="ring5 border-1 rounded-full size-[1331.73px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          className="ring5 border-go-pink-1 md:border-go-white-3 border-1 rounded-full size-[1331.73px] absolute top-[399px] left-1/2 transform translate-[-50%] z-10 hidden md:block">
           </div>
           <div
-          className="ring6 border-1 rounded-full size-[1542px] absolute top-[399px] left-1/2 transform translate-[-50%]">
+          className="ring6 border-go-pink-1 md:border-go-white-3 border-1 rounded-full size-[1542px] absolute top-[399px] left-1/2 transform translate-[-50%] z-10 hidden lg:block">
           </div>
         </div>
       )}

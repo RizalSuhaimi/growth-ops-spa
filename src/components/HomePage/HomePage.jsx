@@ -98,9 +98,11 @@ const HomePage = () => {
       {mounted && createPortal(
         <div 
         id="anim"
+        className="relative z-20"
         >
           <div
-          className="flex items-end w-[1206px] "
+          className="flex items-end w-[1206px]
+          "
           >
             <h1
             className="text-9xl font-extrabold text-white"
@@ -120,18 +122,59 @@ const HomePage = () => {
       {/* This part flows with the DOM */}
       <div 
       id="landing-main"
-      className=" relative z-0"
+      className=""
       >
         <div
-        className="px-[5rem] py-[130px] relative z-0"
+        className="
+        w-[356px] sm:w-full
+        px-[1.5rem] sm:px-[2rem] md:px-[3rem] lg:px-[4rem] xl:px-[5rem] 
+        py-[130px]
+        mx-auto
+        relative Z-0 top-[50px] md:top-[25px] lg:top-[0px]
+        "
         >
-          <h2 className="text-8xl font-extrabold">YOUR NEW-BREED,</h2>
-          <h2 className="text-8xl font-extrabold text-end my-[1.75rem]">END-TO-END</h2>
-          <h2 className="text-8xl font-extrabold ps-[103px]">DIGITAL ALLY</h2>
+          <h2 className="
+          text-[2rem]/[100%] sm:text-[3rem]/[100%] md:text-[4rem]/[100%] lg:text-[5rem]/[100%] xl:text-8xl/[100%] 
+          tracking-[-1.4px]
+          font-extrabold
+          ">
+            YOUR NEW-BREED,
+          </h2>
+          <h2 className="
+          text-[2rem]/[100%] sm:text-[3rem]/[100%] md:text-[4rem]/[100%] lg:text-[5rem]/[100%] xl:text-8xl/[100%]
+          tracking-[-1.4px]
+          font-extrabold 
+          text-end 
+          my-[0.25rem] md:my-[1.75rem]
+          ">
+            END-TO-END
+          </h2>
+          <h2 className="
+          text-[2rem]/[100%] sm:text-[3rem]/[100%] md:text-[4rem]/[100%] lg:text-[5rem]/[100%] xl:text-8xl/[100%]
+          tracking-[-1.4px]
+          font-extrabold 
+          md:ps-[103px]
+          ">
+            DIGITAL ALLY
+          </h2>
+          <p
+          className="
+          text-[0.875rem]/[1.25rem]
+          font-medium
+          mt-[1.25rem]
+          ms-auto
+          w-[73%]
+          md:hidden
+          ">
+            We are an award-winning marketing transformation partner delivering unforgettable digital brands, experiences and technology.
+          </p>
         </div>
         <div
-        className="h-[519px]  bg-gradient-to-t from-black ">
-
+        className="
+        h-[374px] md:h-[519px] 
+        bg-gradient-to-t from-black 
+        relative z-10
+        ">
         </div>
       </div>
       <div 
@@ -150,7 +193,7 @@ const HomePage = () => {
           className="
           text-[1.25rem] md:text-[2rem] 
           font-medium 
-          w-[375px] md:w-[569px] 
+          w-[300px] sm:w-[375px] md:w-[569px] 
           mx-auto 
           text-center
           "

@@ -6,6 +6,7 @@
     --font-display: "Montserrat", "sans-serif";
     --font-scp: "Source Code Pro";
     --breakpoint-1366: 1366px;
+    --breakpoint-1386: 1386px;
     --breakpoint-1166: 1166px;
     --breakpoint-926: 926px;
     --color-black: #010101;
@@ -23,6 +24,7 @@
     --color-go-gray-2: #B4B4B4;
     --color-go-gray-3: #6F7176;
     --color-go-white-2: #F5F5F5;
+    --color-go-white-3: #FFFBFC;
 }
 
 #anim {
@@ -35,9 +37,9 @@
     height: 768px;
     padding: 337px 5rem 199px;
     transform: translate(-50%, -50%);
-    animation: moveUpOut 1.5s linear forwards;
+    /* animation: moveUpOut 1.5s linear forwards;
     animation-delay: 2s; 
-    display: none;
+    display: none; */
 }
 
 @keyframes moveUpOut {
@@ -52,7 +54,6 @@
 }
 
 .ring1 {
-    border-color: #FFFBFC;
     opacity: 0.1;
     animation: pulseRing1 3.5s linear 0s infinite
 }
@@ -70,7 +71,6 @@
 }
 
 .ring2 {
-    border-color: #FFFBFC;
     opacity: 0.1;
     animation: pulseRing2 3.5s linear 0.7s infinite
 }
@@ -87,7 +87,6 @@
     }
 }
 .ring3 {
-    border-color: #FFFBFC;
     opacity: 0.1;
     animation: pulseRing3 3.5s linear 1.4s infinite
 }
@@ -104,7 +103,6 @@
     }
 }
 .ring4 {
-    border-color: #FFFBFC;
     opacity: 0.1;
     animation: pulseRing4 3.5s linear 2.1s infinite
 }
@@ -121,7 +119,6 @@
     }
 }
 .ring5 {
-    border-color: #FFFBFC;
     opacity: 0.1;
     animation: pulseRing5 3.5s linear 2.8s infinite
 }
@@ -138,7 +135,6 @@
     }
 }
 .ring6 {
-    border-color: #FFFBFC;
     opacity: 0.1;
     animation: pulseRing6 3.5s linear 3.5s infinite
 }
