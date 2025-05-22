@@ -98,19 +98,45 @@ const HomePage = () => {
       {mounted && createPortal(
         <div 
         id="anim"
-        className="relative z-20"
+        className="relative z-30 w-full"
         >
           <div
-          className="flex items-end w-[1206px]
+          className="
+          flex 
+          flex-col md:flex-row
+          justify-center
+          items-center md:items-end 
+          
+          w-fit max-w-[88.3%]
+          mx-auto
+          bg-red-900
           "
           >
             <h1
-            className="text-9xl font-extrabold text-white"
+            className="
+            text-[53px]/[56px] md:text-9xl/[116px]
+            font-extrabold 
+            text-white
+            bg-blue-800
+            "
             >
               We’re GrowthOps
             </h1>
             <h2
-            className="bg-white text-go-cyan-2 text-8xl font-extrabold py-[1.25rem] px-[4rem] w-fit h-fit rounded-[5rem] rotate-z-[-9.47deg] mx-[25.05px]"
+            className="
+            bg-white 
+            text-go-cyan-2 
+            text-[2.5rem]/[100%] md:text-8xl/[116px]
+            font-extrabold 
+            py-[1.25rem] md:py-[1.25rem] 
+            px-[2.5rem] md:px-[4rem] 
+            w-fit 
+            h-fit 
+            rounded-[5rem] 
+            rotate-z-[-9.47deg] 
+            md:mx-[25.05px]
+            
+            "
             >
               Asia
             </h2>
