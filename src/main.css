@@ -5,10 +5,10 @@
 @theme {
     --font-display: "Montserrat", "sans-serif";
     --font-scp: "Source Code Pro";
-    --breakpoint-1366: 1366px;
-    --breakpoint-1386: 1386px;
-    --breakpoint-1166: 1166px;
-    --breakpoint-926: 926px;
+    --breakpoint-1366: 85.375rem;
+    --breakpoint-1386: 86.625rem;
+    --breakpoint-1166: 72.875rem;
+    --breakpoint-926: 57.875rem;
     --color-black: #010101;
     --color-go-cyan-1: #07DDDA;
     --color-go-cyan-2: #33FFF3;
@@ -35,12 +35,10 @@
     background-color: #33FFF3;
     width: 1366px;
     height: 768px;
-    padding: 337px 0rem 199px;
     transform: translate(-50%, -50%);
-    
-    /* animation: moveUpOut 1.5s linear forwards;
+    animation: moveUpOut 1.5s linear forwards;
     animation-delay: 2s; 
-    display: none; */
+    /* display: none; */
 }
 
 @keyframes moveUpOut {
@@ -54,9 +52,15 @@
     }
 }
 
-@media only screen and (max-width: 1385px) {
+@media only screen and (max-width: 1366px) {
     #anim {
         width: 100%;
+        
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #anim {
         height: 90%;
     }
 }

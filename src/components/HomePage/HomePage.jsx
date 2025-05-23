@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 import Service from '../Service'
 import QuantResult from '../QuantResult'
 import mockImage from "../../assets/MockImage.png"
+import ellipse14 from "../../assets/Ellipse14.png"
 
 import logoUob from "../../assets/Logo-UOB.png"
 import logoToyota from "../../assets/Logo-toyota.png"
@@ -105,28 +106,37 @@ const HomePage = () => {
           flex 
           flex-col md:flex-row
           justify-center
-          items-center md:items-end 
-          
+          items-start md:items-end 
           w-fit max-w-[88.3%]
+          mt-[474px] lg:mt-[337px]
           mx-auto
-          bg-red-900
           "
           >
-            <h1
-            className="
-            text-[53px]/[56px] md:text-9xl/[116px]
-            font-extrabold 
-            text-white
-            bg-blue-800
-            "
-            >
-              We’re GrowthOps
-            </h1>
+            <div>
+              <h1
+              className="
+              text-[53px]/[56px] sm:text-[4rem]/[100%] lg:text-[6.5rem]/[100%] 1366:text-[8rem]/[116px]
+              font-extrabold 
+              text-white
+              "
+              >
+                We’re
+              </h1>
+              <h1
+              className="
+              text-[53px]/[56px] sm:text-[4rem]/[100%] lg:text-[6.5rem]/[100%] 1366:text-[8rem]/[116px]
+              font-extrabold 
+              text-white
+              "
+              >
+                GrowthOps
+              </h1>
+            </div>
             <h2
             className="
             bg-white 
             text-go-cyan-2 
-            text-[2.5rem]/[100%] md:text-8xl/[116px]
+            text-[2.5rem]/[100%] sm:text-[3.5rem]/[100%] lg:text-[4.5rem]/[100%] 1366:text-[6rem]/[116px]
             font-extrabold 
             py-[1.25rem] md:py-[1.25rem] 
             px-[2.5rem] md:px-[4rem] 
@@ -135,7 +145,7 @@ const HomePage = () => {
             rounded-[5rem] 
             rotate-z-[-9.47deg] 
             md:mx-[25.05px]
-            
+            mt-[20px]
             "
             >
               Asia
@@ -276,7 +286,7 @@ const HomePage = () => {
         >
           <h3 
           className="
-          text-[35px]/[2.5rem] sm:text-[2.75rem]/[2.5rem] md:text-[3.875rem]/[2.5rem]  lg:text-[5.5rem]/[5.25rem] 
+          text-[35px]/[2.5rem] sm:text-[2.75rem]/[2.5rem] md:text-[3.875rem]/[3.5rem] lg:text-[5.5rem]/[5.25rem] 
           font-extrabold 
           text-center 
           pb-[3.5rem] 
@@ -477,13 +487,41 @@ const HomePage = () => {
       id="results"
       className=""
       >
-        <h3 
-        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
-        >
-          UNFORGETTABLE RESULTS
-        </h3>
         <div
-        className="w-[975px] h-[843px] m-auto relative"
+        className="
+        relative
+        ">
+          <h3 
+          className="
+          text-[35px]/[95.5%] sm:text-[2.75rem] md:text-[3.875rem] lg:text-[5.25rem] 
+          font-extrabold 
+          1166:w-[1000px] 
+          text-center 
+          m-auto
+          "
+          >
+            UNFORGETTABLE RESULTS
+          </h3>
+          <img 
+            className="
+            w-fit 
+            h-fit 
+            absolute
+            top-0
+            "
+            src={ellipse14} 
+            alt="photo of service" 
+          />
+        </div>
+        
+        <div
+        className="
+        w-[975px] 
+        h-[843px] 
+        m-auto 
+        mt-[98px]
+        relative
+        "
         >  
           <div
           className="w-[356px] absolute top-0"
