@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Outlet, Link, useLocation } from 'react-router-dom'
-import OpenInNewIcon from "../../assets/open_in_new.svg"
-import InstagramIcon from "../../assets/Logo-instagram.svg"
-import FacebookIcon from "../../assets/Logo-facebook.svg"
-import LinkedInIcon from "../../assets/Logo-linkedin.svg"
-import YouTubeIcon from "../../assets/Logo-youtube.svg"
-import goLogo from "../../assets/GOLogo.svg"
-import bars from "../../assets/bars.svg"
+import OpenInNewIcon from "../assets/open_in_new.svg"
+import InstagramIcon from "../assets/Logo-instagram.svg"
+import FacebookIcon from "../assets/Logo-facebook.svg"
+import LinkedInIcon from "../assets/Logo-linkedin.svg"
+import YouTubeIcon from "../assets/Logo-youtube.svg"
+import goLogo from "../assets/GOLogo.svg"
+import bars from "../assets/bars.svg"
 
 const Root = () => {
   const location = useLocation()
@@ -14,7 +14,15 @@ const Root = () => {
 
   return (
     <div 
-    className='w-full 1366:w-[1366px] bg-black m-auto pb-[4.25rem] pt-[1.5rem] overflow-hidden relative'
+    className="
+    w-full 1366:w-[1366px] 
+    bg-black 
+    m-auto 
+    pb-[4.25rem] 
+    pt-[1.5rem] 
+    overflow-hidden 
+    relative
+    "
     >
       <header
       className="bg-black border-2 border-go-white-2/8 rounded-[4rem] w-[93%] 1366:w-[1270px] h-[69px] flex justify-between items-center py-[15px] px-[2rem] mx-auto mb-[1.375rem] relative z-20"
@@ -67,10 +75,20 @@ const Root = () => {
         <Outlet />
       </div>
       <footer
-      className="border-1 w-full h-[553px] "
+      className="
+      w-full 
+      h-[fit] "
       >
         <div
-        className="flex justify-between w-[496px] mx-auto pt-[302px] pb-[56px]"
+        className="
+        flex flex-wrap
+        justify-center
+        gap-x-[40px] gap-y-[30px]
+        w-[350px] sm:w-[496px] 
+        mx-auto 
+        pt-[302px] 
+        pb-[56px]
+        "
         >
           <Link>
             Services
@@ -89,7 +107,13 @@ const Root = () => {
           </Link>
         </div>
         <div
-        className="w-[296px] h-[32] flex justify-between mx-auto"
+        className="
+        w-[296px] 
+        max-w-[79%]
+        h-[32] 
+        flex 
+        justify-between 
+        mx-auto"
         >
           <img src={LinkedInIcon} alt="LinkedIn" className=""/>
           <img src={FacebookIcon} alt="LinkedIn" className=""/>
@@ -97,15 +121,32 @@ const Root = () => {
           <img src={YouTubeIcon} alt="LinkedIn" className=""/>
         </div>
         <div
-        className="w-[1206px] flex justify-between mx-auto pt-[80px]"
+        className="
+        w-[88.3%] 
+        flex 
+        flex-col md:flex-row
+        justify-between 
+        items-center
+        mx-auto 
+        pt-[80px]"
         >
           <p
-          className="text-xs text-go-gray-3"
+          className="
+          text-xs 
+          text-go-gray-3
+          hidden md:block
+          "
           >
             © Copyright GrowthOps. All rights reserved.
           </p>
           <div
-          className="flex gap-x-[3rem]"
+          className="
+          flex 
+          flex-col md:flex-row
+          items-center
+          gap-x-[3rem]
+          gap-y-[1.5rem]
+          "
           >
             <Link
             className="text-xs"

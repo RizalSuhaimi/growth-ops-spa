@@ -2,46 +2,46 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { createPortal } from 'react-dom'
 
-import Service from '../Service'
-import QuantResult from '../QuantResult'
-import mockImage from "../../assets/MockImage.png"
-import ellipse14 from "../../assets/Ellipse14.png"
-import ellipse12 from "../../assets/Ellipse12.png"
+import Service from './Service'
+import QuantResult from './QuantResult'
+import mockImage from "../assets/MockImage.png"
+import ellipse14 from "../assets/Ellipse14.png"
+import ellipse12 from "../assets/Ellipse12.png"
 
-import logoUob from "../../assets/Logo-UOB.png"
-import logoToyota from "../../assets/Logo-toyota.png"
-import logoPosb from "../../assets/Logo-posb.png"
-import logoSinglife from "../../assets/Logo-singlife.png"
-import logoAmway from "../../assets/Logo-amway.png"
-import logoFitnessFirst from "../../assets/Logo-FitnessFirst.png"
-import logoSony from "../../assets/Logo-sony.png"
-import logoXRvision from "../../assets/Logo-xrvision.png"
-import logoCrown from "../../assets/Logo-crown.png"
-import logoAIA from "../../assets/Logo-aia.png"
-import logoWWF from "../../assets/Logo-WWF.png"
+import logoUob from "../assets/Logo-UOB.png"
+import logoToyota from "../assets/Logo-toyota.png"
+import logoPosb from "../assets/Logo-posb.png"
+import logoSinglife from "../assets/Logo-singlife.png"
+import logoAmway from "../assets/Logo-amway.png"
+import logoFitnessFirst from "../assets/Logo-FitnessFirst.png"
+import logoSony from "../assets/Logo-sony.png"
+import logoXRvision from "../assets/Logo-xrvision.png"
+import logoCrown from "../assets/Logo-crown.png"
+import logoAIA from "../assets/Logo-aia.png"
+import logoWWF from "../assets/Logo-WWF.png"
 
-import logoMAS from "../../assets/Logo-malaysiaairlines.png"
-import logoMaxis from "../../assets/Logo-maxis.png"
-import logoGrab from "../../assets/Logo-grab.png"
-import logoDbs from "../../assets/Logo-dbs.png"
-import logoTreasure from "../../assets/Logo-treasure.png"
-import logoMicrosoft from "../../assets/Logo-microsoft.png"
-import logoLogitech from "../../assets/Logo-logitech.png"
-import logoDreamscape from "../../assets/Logo-dreamscapedigital.png"
-import logoStandardChartered from "../../assets/Logo-standardchartered.png"
-import logoSitebeat from "../../assets/Logo-sitebeat.png"
-import logoMizuho from "../../assets/Logo-mizuho.png"
+import logoMAS from "../assets/Logo-malaysiaairlines.png"
+import logoMaxis from "../assets/Logo-maxis.png"
+import logoGrab from "../assets/Logo-grab.png"
+import logoDbs from "../assets/Logo-dbs.png"
+import logoTreasure from "../assets/Logo-treasure.png"
+import logoMicrosoft from "../assets/Logo-microsoft.png"
+import logoLogitech from "../assets/Logo-logitech.png"
+import logoDreamscape from "../assets/Logo-dreamscapedigital.png"
+import logoStandardChartered from "../assets/Logo-standardchartered.png"
+import logoSitebeat from "../assets/Logo-sitebeat.png"
+import logoMizuho from "../assets/Logo-mizuho.png"
 
-import logoCimb from "../../assets/Logo-cimb.png"
-import logoRhb from "../../assets/Logo-rhb.png"
-import logoNikkoAm from "../../assets/Logo-nikkoam.png"
-import logoMannHummel from "../../assets/Logo-mann+hummel.png"
-import logoChubb from "../../assets/Logo-chubb.png"
-import logoNtuc from "../../assets/Logo-ntuc.png"
-import logoTaylors from "../../assets/Logo-taylorsuniversity.png"
-import logoExplanade from "../../assets/Logo-explanade.png"
-import logoProton from "../../assets/Logo-proton.png"
-import logoTriumph from "../../assets/Logo-triumph.png"
+import logoCimb from "../assets/Logo-cimb.png"
+import logoRhb from "../assets/Logo-rhb.png"
+import logoNikkoAm from "../assets/Logo-nikkoam.png"
+import logoMannHummel from "../assets/Logo-mann+hummel.png"
+import logoChubb from "../assets/Logo-chubb.png"
+import logoNtuc from "../assets/Logo-ntuc.png"
+import logoTaylors from "../assets/Logo-taylorsuniversity.png"
+import logoExplanade from "../assets/Logo-explanade.png"
+import logoProton from "../assets/Logo-proton.png"
+import logoTriumph from "../assets/Logo-triumph.png"
 
 const HomePage = () => {
   const clientsRow1 = [
@@ -852,7 +852,7 @@ const HomePage = () => {
         <div
         className="
         w-full 
-        h-[405px] 
+        h-[349px] md:h-[405px] 
         relative 
         mt-[4rem]
         py-[2.875rem]
@@ -862,7 +862,7 @@ const HomePage = () => {
           <div
           className=" 
           w-[2080px] 
-          h-[62px] 
+          h-[48px] md:h-[62px] 
           flex 
           justify-between 
           absolute top-[46px]
@@ -871,7 +871,10 @@ const HomePage = () => {
           >
             {clientsRow1.map((client) => (
               <div
-              className="h-full w-[160px]"
+              className="
+              h-full 
+              w-[123.87px] md:w-[160px]
+              "
               >
                 <img 
                 src={client} 
@@ -884,7 +887,7 @@ const HomePage = () => {
           <div
           className="
           w-[2080px] 
-          h-[62px] 
+          h-[48px] md:h-[62px]
           flex 
           justify-between 
           absolute right-0 top-[50%]
@@ -894,7 +897,10 @@ const HomePage = () => {
           >
             {clientsRow2.map((client) => (
               <div
-              className="h-full w-[160px]"
+              className="
+              h-full 
+              w-[123.87px] md:w-[160px]
+              "
               >
                 <img 
                 src={client} 
@@ -907,7 +913,7 @@ const HomePage = () => {
           <div
           className="
           w-[2080px] 
-          h-[62px] 
+          h-[48px] md:h-[62px]
           flex 
           justify-between 
           absolute bottom-[46px]
@@ -916,7 +922,10 @@ const HomePage = () => {
           >
             {clientsRow3.map((client) => (
               <div
-              className="h-full w-[160px]"
+              className="
+              h-full 
+              w-[123.87px] md:w-[160px]
+              "
               >
                 <img 
                 src={client} 
@@ -930,14 +939,24 @@ const HomePage = () => {
       </div>
       <div 
       id="contact"
-      className="bg-blue-600 my-[15rem] w-full"
+      className="
+      my-[15rem] 
+      w-full"
       >
         <Link
         to="/contact"
         className="w-fit block m-auto"
         >
           <button
-          className="bg-go-green-1 rounded-[3rem] py-[1rem] px-[2.5rem] m-auto "
+          className="
+          bg-go-green-1 
+          rounded-[3rem] 
+          py-[0.875rem] md:py-[1rem] 
+          px-[2.25rem] md:px-[2.5rem] 
+          mx-auto 
+          text-[1rem]/[100%] md:text-[1.125rem]/[100%]
+          font-extrabold
+          "
           >
             Let's chat
           </button>

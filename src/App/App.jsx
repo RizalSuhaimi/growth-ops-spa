@@ -4,9 +4,9 @@ import {
   BrowserRouter,
   Routes
 } from "react-router-dom";
-import Root from "../components/Root/Root"
-import HomePage from '../components/HomePage/HomePage'
-import Contact from "../components/Contact/Contact"
+import Root from "../components/Root"
+import HomePage from '../components/HomePage'
+import Contact from "../components/Contact"
 
 const App = () => {
 
