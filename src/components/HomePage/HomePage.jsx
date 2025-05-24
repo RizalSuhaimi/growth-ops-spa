@@ -275,6 +275,7 @@ const HomePage = () => {
           text-[2.25rem] sm:text-[3.5rem] md:text-[5rem] lg:text-8xl 
           font-extrabold 
           text-center
+          animatedGradient
           "
           >
             GrowthOps Asia
@@ -494,37 +495,59 @@ const HomePage = () => {
           <h3 
           className="
           text-[35px]/[95.5%] sm:text-[2.75rem] md:text-[3.875rem] lg:text-[5.25rem] 
+          bg-gradient-to-r from-go-blue-1 via-go-cyan-4 to-go-yellow-1 bg-clip-text text-transparent
           font-extrabold 
-          1166:w-[1000px] 
           text-center 
           m-auto
           "
           >
-            UNFORGETTABLE RESULTS
+            UNFORGETTABLE
           </h3>
-          <img 
+          <h3 
+          className="
+          text-[35px]/[95.5%] sm:text-[2.75rem] md:text-[3.875rem] lg:text-[5.25rem] 
+          font-extrabold 
+          text-center 
+          m-auto
+          "
+          >
+            RESULTS
+          </h3>
+          <div
+          className="
+          absolute
+          top-[25%]
+          left-[50%] sm:left-[54%]
+          transform translate-[-50%]
+          w-[356px] sm:w-[500px] md:w-[680px] lg:w-[941px]
+          ">
+            <img 
             className="
-            w-fit 
-            h-fit 
-            absolute
-            top-0
+            w-full
+            h-full
             "
             src={ellipse14} 
             alt="photo of service" 
-          />
+            />
+          </div>
+          
         </div>
         
         <div
         className="
-        w-[975px] 
-        h-[843px] 
+        w-[90%] md:w-[80%] 1166:w-[71.4%] 
+        h-fit 926:h-[843px] 
         m-auto 
         mt-[98px]
         relative
+        flex-col
         "
         >  
           <div
-          className="w-[356px] absolute top-0"
+          className="
+          w-[245px] 450:w-[356px] 
+          926:absolute 926:top-0
+          "
           >
             <QuantResult percentage={"400"} text={"INCREASE IN ORGANIC PAGE VIEWS"}/>
             <p
@@ -534,7 +557,12 @@ const HomePage = () => {
             </p>
           </div>
           <div
-          className="w-[356px] absolute top-[33%] right-0 transform translate-y-[-50%]"
+          className="
+          w-[245px] 450:w-[356px] 
+          my-[3.5rem] 926:my-0
+          justify-self-end
+          926:absolute 926:top-[33%] 926:right-0 
+          926:transform 926:translate-y-[-50%]"
           >
             <QuantResult percentage={"4.5"} text={"INCREASE IN SALES"}/>
             <p
@@ -544,7 +572,11 @@ const HomePage = () => {
             </p>
           </div>
           <div
-          className="w-[356px] absolute top-[50%] transform translate-y-[-50%]"
+          className="
+          w-[245px] 450:w-[356px] 
+          926:absolute 926:top-[50%] 
+          926:transform 926:translate-y-[-50%]
+          "
           >
             <QuantResult percentage={"96"} text={"FASTER PAGE LAUNCHES"}/>
             <p
@@ -588,7 +620,13 @@ const HomePage = () => {
             
         
           <div
-          className="w-[356px] absolute top-[66%] right-0 transform translate-y-[-50%]"
+          className="
+          w-[245px] 450:w-[356px]
+          my-[3.5rem] 926:my-0
+          justify-self-end
+          926:absolute 926:top-[66%] 926:right-0 
+          926:transform 926:translate-y-[-50%]
+          "
           >
             <QuantResult percentage={"71"} text={"REDUCTION IN CPL"}/>
             <p
@@ -598,7 +636,10 @@ const HomePage = () => {
             </p>
           </div>
           <div
-          className="w-[356px] absolute bottom-0"
+          className="
+          w-[245px] 450:w-[356px] 
+          926:absolute 926:bottom-0
+          "
           >
             <QuantResult percentage={"38"} text={"CONVERSION RATE IMPROVEMENT"}/>
             <p

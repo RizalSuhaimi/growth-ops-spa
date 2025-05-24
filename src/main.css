@@ -9,6 +9,7 @@
     --breakpoint-1386: 86.625rem;
     --breakpoint-1166: 72.875rem;
     --breakpoint-926: 57.875rem;
+    --breakpoint-450: 28.125rem;
     --color-black: #010101;
     --color-go-cyan-1: #07DDDA;
     --color-go-cyan-2: #33FFF3;
@@ -160,5 +161,27 @@
     }
     100% {
         opacity: 0.1;
+    }
+}
+
+.animatedGradient {
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+    background-size: 800% 800%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 8s ease infinite;
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
