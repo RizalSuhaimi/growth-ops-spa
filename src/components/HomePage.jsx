@@ -950,6 +950,8 @@ const HomePage = () => {
           <button
           className="
           bg-go-green-1 
+          hover:bg-green-500
+          hover:cursor-pointer
           rounded-[3rem] 
           py-[0.875rem] md:py-[1rem] 
           px-[2.25rem] md:px-[2.5rem] 

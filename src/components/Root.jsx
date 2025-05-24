@@ -74,6 +74,55 @@ const Root = () => {
       <div className=" w-full">
         <Outlet />
       </div>
+
+      <div 
+      id="rings"
+      className="
+      "
+      >
+        <div
+        className="
+        border-go-pink-1 md:border-white
+        opacity-30
+        border-1 
+        rounded-full 
+        size-[1536px] md:size-[4155px] 
+        absolute 
+        bottom-[-18%] md:bottom-[-56.5%] 926:bottom-[-55.5%] 1366:bottom-[-64%] 
+        left-1/2 
+        transform translate-[-50%] 
+        z-10
+        ">
+        </div>
+        <div
+        className="
+        border-white
+        opacity-50
+        border-1 
+        rounded-full 
+        size-[1536px] md:size-[4155px] 
+        absolute 
+        bottom-[-18.5%] md:bottom-[-57%] 926:bottom-[-56%] 1366:bottom-[-64.5%] 
+        left-1/2 
+        transform translate-[-50%] 
+        z-10
+        ">
+        </div>
+        <div
+        className="
+        border-white
+        opacity-70
+        border-1 
+        rounded-full 
+        size-[1536px] md:size-[4155px] 
+        absolute 
+        bottom-[-19%] md:bottom-[-57.5%] 926:bottom-[-56.5%] 1366:bottom-[-65%] 
+        left-1/2 
+        transform translate-[-50%] 
+        z-10
+        ">
+        </div>
+      </div>
       <footer
       className="
       w-full 
