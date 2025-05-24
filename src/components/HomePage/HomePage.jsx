@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { createPortal } from 'react-dom'
 
@@ -6,6 +6,7 @@ import Service from '../Service'
 import QuantResult from '../QuantResult'
 import mockImage from "../../assets/MockImage.png"
 import ellipse14 from "../../assets/Ellipse14.png"
+import ellipse12 from "../../assets/Ellipse12.png"
 
 import logoUob from "../../assets/Logo-UOB.png"
 import logoToyota from "../../assets/Logo-toyota.png"
@@ -86,6 +87,69 @@ const HomePage = () => {
   ]
 
   const [clientIndustry, setClientIndustry] = useState("Telco")
+
+  const carouselContainerRef = useRef(null)
+  const carouselContentLeftRef1 = useRef(null)
+  const carouselContentLeftRef2 = useRef(null)
+
+  useEffect(() => {
+    const animateClientsLeft = () => {
+      const container = carouselContainerRef.current
+      const content1 = carouselContentLeftRef1.current
+      const content2 = carouselContentLeftRef2.current
+      if (!container || !content1 || !content2) return
+
+      const containerWidth = container.offsetWidth
+      const contentWidth = content1.scrollWidth
+      const distance = contentWidth - containerWidth
+
+      content1.style.transition = "none"
+      content1.style.transform = "translateX(0)"
+      void content1.offsetWidth // Force reflow
+
+      content1.style.transition = "transform 10s linear"
+      content1.style.transform = `translateX(-${distance}px)`
+
+
+      content2.style.transition = "none"
+      content2.style.transform = "translateX(0)"
+      void content2.offsetWidth // Force reflow
+
+      content2.style.transition = "transform 10s linear"
+      content2.style.transform = `translateX(-${distance}px)`
+      
+    }
+
+    animateClientsLeft()
+    window.addEventListener("resize", animateClientsLeft)
+    return () => window.removeEventListener("resize", animateClientsLeft)
+  })
+
+  const carouselContentRightRef = useRef(null)
+
+  useEffect(() => {
+    const animateClientsRight = () => {
+      const container = carouselContainerRef.current
+      const content = carouselContentRightRef.current
+      if (!container || !content) return
+
+      const containerWidth = container.offsetWidth
+      const contentWidth = content.scrollWidth
+      const distance = contentWidth - containerWidth
+
+      content.style.transition = "none"
+      content.style.transform = "translateX(0)"
+      void content.offsetWidth // Force reflow
+
+      content.style.transition = "transform 10s linear"
+      content.style.transform = `translateX(${distance}px)`
+      
+    }
+
+    animateClientsRight()
+    window.addEventListener("resize", animateClientsRight)
+    return () => window.removeEventListener("resize", animateClientsRight)
+  })
 
   const [mounted, setMounted] = useState(false)
 
@@ -527,7 +591,7 @@ const HomePage = () => {
             h-full
             "
             src={ellipse14} 
-            alt="photo of service" 
+            alt="ellipse" 
             />
           </div>
           
@@ -652,15 +716,32 @@ const HomePage = () => {
       </div>
       <div 
       id="reviews"
-      className="bg-blue-700"
+      className="
+      mt-[146px] md:mt-[203px]
+      mb-[342px] md:mb-[204px]
+      "
       >
         <h3 
-        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
+        className="
+        text-[35px]/[95.5%] sm:text-[2.75rem] md:text-[3.875rem] lg:text-[5.25rem]
+        font-extrabold
+        w-[90%] 
+        text-center 
+        m-auto"
         >
           WHAT CLIENTS SAY
         </h3>
         <div
-        className="border-1 rounded-[30px] flex p-[0.375rem] w-[371px] m-auto"
+        className="
+        border-1 
+        mt-[40px] md:mt-[88px]
+        mb-[61px] md:mb-[64px]
+        rounded-[30px] 
+        flex 
+        justify-between
+        p-[0.375rem] 
+        w-[95%] 450:w-[371px] 
+        m-auto"
         >
           <button
           className="rounded-[30px] bg-go-cyan-1 py-[0.75rem] px-[1.25rem]"
@@ -684,7 +765,12 @@ const HomePage = () => {
           </button>
         </div>
         <div
-        className="flex justify-between w-[1000px] m-auto"
+        className="
+        flex 
+        justify-between 
+        w-full sm:w-[95%] lg:w-[1000px] 
+        m-auto
+        "
         >
           <div
           className="font-bold text-[2.5rem]/[100%]"
@@ -692,14 +778,22 @@ const HomePage = () => {
             “
           </div>
           <div
-          className="w-[895px]"
+          className="w-[89.5%]"
           >
             <p
-            className="text-2xl/[2.25rem]"
+            className="
+            text-[1.25rem]/[160%] md:text-[1.375rem]/[150%] lg:text-[1.5rem]/[150%]
+            font-medium
+            "
             >
               Through this initiative, GrowthOps have shown to have the right capabilities to take our platform to the next level. We believe the refreshed U.COM.MY will equip us with more insights, enabling us to make more data-led decisions that will result in new digital experiences that will truly benefit our customers.
             </p>
-            <p>
+            <p
+            className="
+            font-bold
+            mt-[3rem] md:mt-[4rem]
+            mb-[0.75rem]
+            ">
               Jasmine Lee
             </p>
             <p
@@ -712,18 +806,68 @@ const HomePage = () => {
       </div>
       <div 
       id="clients"
-      className="bg-red-600"
+      className="
+      "
       >
-        <h3 
-        className="text-[5.25rem] font-extrabold w-[1000px] text-center m-auto"
-        >
-          SUPER PROUD TO WORK WITH
-        </h3>
         <div
-        className="w-full h-[405px] relative bg-blue-900 py-[2.875rem] overflow-"
+        className="
+        relative
+        w-[300px] 450:w-[450px] md:w-[700px] lg:w-[850px]
+        mx-auto
+        ">
+          <h3 
+          className="
+          text-[35px]/[95.5%] sm:text-[2.75rem] md:text-[3.875rem] lg:text-[5.25rem] 
+          font-extrabold
+          text-center 
+          m-auto
+          "
+          >
+            <span
+            className="
+            bg-gradient-to-r from-go-purple-1 to-go-blue-2 bg-clip-text text-transparent
+            ">
+              SUPER </span> 
+            PROUD TO WORK WITH
+          </h3>
+          <div
+          className="
+          absolute
+          top-[25%]
+          left-[26%] sm:left-[20%] md:left-[23%] lg:left-[20%]
+          transform translate-[-50%]
+          w-[148px] sm:w-[190px] md:w-[260px] lg:w-[373px]
+          ">
+            <img 
+            className="
+            w-full
+            h-full
+            "
+            src={ellipse12} 
+            alt="ellipse" 
+            />
+          </div>
+        </div>
+        
+        <div
+        className="
+        w-full 
+        h-[405px] 
+        relative 
+        mt-[4rem]
+        py-[2.875rem]
+        "
+        ref={carouselContainerRef}
         >
           <div
-          className=" w-[2080px] h-[60px] flex justify-between absolute top-[46px]"
+          className=" 
+          w-[2080px] 
+          h-[62px] 
+          flex 
+          justify-between 
+          absolute top-[46px]
+          "
+          ref={carouselContentLeftRef1}
           >
             {clientsRow1.map((client) => (
               <div
@@ -738,7 +882,15 @@ const HomePage = () => {
             ))}
           </div>
           <div
-          className="w-[2080px] h-[60px] flex justify-between absolute right-0 top-[50%] translate-y-[-50%]"
+          className="
+          w-[2080px] 
+          h-[62px] 
+          flex 
+          justify-between 
+          absolute right-0 top-[50%]
+          transform translate-y-[-50%]
+          "
+          ref={carouselContentRightRef}
           >
             {clientsRow2.map((client) => (
               <div
@@ -753,7 +905,14 @@ const HomePage = () => {
             ))}
           </div>
           <div
-          className="w-[2080px] h-[60px] flex justify-between absolute bottom-[46px]"
+          className="
+          w-[2080px] 
+          h-[62px] 
+          flex 
+          justify-between 
+          absolute bottom-[46px]
+          "
+          ref={carouselContentLeftRef2}
           >
             {clientsRow3.map((client) => (
               <div

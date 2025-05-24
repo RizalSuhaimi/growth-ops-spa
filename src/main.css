@@ -39,7 +39,7 @@
     transform: translate(-50%, -50%);
     animation: moveUpOut 1.5s linear forwards;
     animation-delay: 2s; 
-    /* display: none; */
+    display: none;
 }
 
 @keyframes moveUpOut {
@@ -183,5 +183,41 @@
 
     100% {
         background-position: 0% 50%;
+    }
+}
+
+.animateClientsLeft {
+    animation: animateClientsLeft 6s linear infinite;
+}
+
+@keyframes animateClientsLeft {
+    0% {
+        right: -714px;
+    }
+
+    100% {
+        right: 0px;
+    }
+/* 
+    50% {
+        right: 0px;
+    }
+
+    100% {
+        right: -714px;
+    } */
+}
+
+.animateClientsRight {
+    animation: animateClientsRight 6s linear forwards;
+}
+
+@keyframes animateClientsRight {
+    0% {
+        left: -714px;
+    }
+
+    100% {
+        left: 0px;
     }
 }
