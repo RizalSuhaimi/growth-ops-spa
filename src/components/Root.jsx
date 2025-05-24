@@ -33,7 +33,17 @@ const Root = () => {
           <img src={goLogo} alt="Open In New" className=""/>
         </Link>
         <button
-        className="flex items-center gap-x-[0.5rem]"
+        className="
+        flex 
+        items-center 
+        gap-x-[0.5rem]
+        hover:cursor-pointer
+        ps-[1rem]
+        pe-[0.5rem]
+        rounded-md
+        hover:bg-neutral-900
+        active:bg-neutral-800
+        "
         >
           <p
           className="text-sm font-bold"

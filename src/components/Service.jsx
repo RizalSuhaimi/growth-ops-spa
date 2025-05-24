@@ -19,11 +19,25 @@ const Service = ({index, title, points}) => {
           {point}
         </p>
       ))}
-      <button
-      className="w-[121px] h-[41px] border-1 rounded-[48px] mt-[0.5rem] text-sm font-extrabold hover:bg-gray-900"
-      >
-        See more
-      </button>
+      <Link>
+        <button
+        className="
+        w-[121px] 
+        h-[41px] 
+        border-1 
+        rounded-[48px] 
+        mt-[0.5rem] 
+        text-sm 
+        font-extrabold 
+        hover:cursor-pointer
+        hover:bg-neutral-900
+        active:bg-neutral-800
+        "
+        >
+          See more
+        </button>
+      </Link>
+      
     </>
   )
 }

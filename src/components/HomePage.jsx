@@ -151,6 +151,8 @@ const HomePage = () => {
     return () => window.removeEventListener("resize", animateClientsRight)
   })
 
+  const [letsChatClicked, setLetsChatClicked] = useState(false)
+
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -944,13 +946,16 @@ const HomePage = () => {
       w-full"
       >
         <Link
-        to="/contact"
+        to="/Contact"
         className="w-fit block m-auto"
         >
           <button
-          className="
-          bg-go-green-1 
-          hover:bg-green-500
+          type="button"
+          onClick={() => setLetsChatClicked(!letsChatClicked)}
+          className={`
+          bg-go-green-1
+          hover:bg-green-600
+          active:bg-green-500
           hover:cursor-pointer
           rounded-[3rem] 
           py-[0.875rem] md:py-[1rem] 
@@ -958,7 +963,7 @@ const HomePage = () => {
           mx-auto 
           text-[1rem]/[100%] md:text-[1.125rem]/[100%]
           font-extrabold
-          "
+          `}
           >
             Let's chat
           </button>
