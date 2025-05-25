@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom'
 
 import Service from './Service'
 import QuantResult from './QuantResult'
+
 import mockImage from "../assets/MockImage.png"
 import ellipse14 from "../assets/Ellipse14.png"
 import ellipse12 from "../assets/Ellipse12.png"

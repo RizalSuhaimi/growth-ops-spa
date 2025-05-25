@@ -86,8 +86,9 @@ const Root = () => {
       </div>
 
       <div 
-      id="rings"
+      id="rings2"
       className="
+      hidden
       "
       >
         <div
