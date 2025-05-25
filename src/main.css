@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-display: "Montserrat", "sans-serif";
+    --font-scp: "Source Code Pro";
+    --breakpoint-1366: 85.375rem;
+    --breakpoint-1386: 86.625rem;
+    --breakpoint-1166: 72.875rem;
+    --breakpoint-926: 57.875rem;
+    --breakpoint-450: 28.125rem;
+    --breakpoint-434: 27.125rem;
+    --color-black: #010101;
+    --color-go-cyan-1: #07DDDA;
+    --color-go-cyan-2: #33FFF3;
+    --color-go-cyan-3: #98E0FF;
+    --color-go-cyan-4: #19B2A7;
+    --color-go-blue-1: #004CBA;
+    --color-go-blue-2: #96BFFD;
+    --color-go-yellow-1: #FDD196;
+    --color-go-purple-1: #9747FF;
+    --color-go-green-1: #33FF85;
+    --color-go-pink-1: #FF3366;
+    --color-go-gray-1: #CCC;
+    --color-go-gray-2: #B4B4B4;
+    --color-go-gray-3: #6F7176;
+    --color-go-gray-4: #0E1015;
+    --color-go-gray-5: #1B1D24;
+    --color-go-gray-6: #999D9F;
+    --color-go-gray-7: #666;
+    --color-go-gray-8: #040506;
+    --color-go-white-2: #F5F5F5;
+    --color-go-white-3: #FFFBFC;
+}
+
+#anim {
+    font-family: "Montserrat";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #33FFF3;
+    width: 1366px;
+    height: 81.3%;
+    transform: translate(-50%, -50%);
+    box-sizing: content-box;
+    border: 90px solid black;
+    animation: moveUpOut 1.5s linear forwards;
+    animation-delay: 2s; 
+    /* display: none; */
+}
+
+@keyframes moveUpOut {
+    0% {
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+    100% {
+        transform: translate(-50%, -165%);
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    #anim {
+        width: 100%;
+        
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #anim {
+        height: 90%;
+    }
+}
+
+.ring1 {
+    opacity: 0.1;
+    animation: pulseRing1 3.5s linear 0s infinite
+}
+
+@keyframes pulseRing1 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.ring2 {
+    opacity: 0.1;
+    animation: pulseRing2 3.5s linear 0.7s infinite
+}
+
+@keyframes pulseRing2 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring3 {
+    opacity: 0.1;
+    animation: pulseRing3 3.5s linear 1.4s infinite
+}
+
+@keyframes pulseRing3 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring4 {
+    opacity: 0.1;
+    animation: pulseRing4 3.5s linear 2.1s infinite
+}
+
+@keyframes pulseRing4 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring5 {
+    opacity: 0.1;
+    animation: pulseRing5 3.5s linear 2.8s infinite
+}
+
+@keyframes pulseRing5 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+.ring6 {
+    opacity: 0.1;
+    animation: pulseRing6 3.5s linear 3.5s infinite
+}
+
+@keyframes pulseRing6 {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.animatedGradient {
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+    background-size: 800% 800%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 8s ease infinite;
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animateClientsLeft {
+    animation: animateClientsLeft 6s linear infinite;
+}
+
+@keyframes animateClientsLeft {
+    0% {
+        right: -714px;
+    }
+
+    100% {
+        right: 0px;
+    }
+/* 
+    50% {
+        right: 0px;
+    }
+
+    100% {
+        right: -714px;
+    } */
+}
+
+.animateClientsRight {
+    animation: animateClientsRight 6s linear forwards;
+}
+
+@keyframes animateClientsRight {
+    0% {
+        left: -714px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
