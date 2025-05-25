@@ -10,6 +10,7 @@
     --breakpoint-1166: 72.875rem;
     --breakpoint-926: 57.875rem;
     --breakpoint-450: 28.125rem;
+    --breakpoint-434: 27.125rem;
     --color-black: #010101;
     --color-go-cyan-1: #07DDDA;
     --color-go-cyan-2: #33FFF3;
@@ -27,6 +28,8 @@
     --color-go-gray-4: #0E1015;
     --color-go-gray-5: #1B1D24;
     --color-go-gray-6: #999D9F;
+    --color-go-gray-7: #666;
+    --color-go-gray-8: #040506;
     --color-go-white-2: #F5F5F5;
     --color-go-white-3: #FFFBFC;
 }

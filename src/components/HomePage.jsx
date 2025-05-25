@@ -44,47 +44,51 @@ import logoExplanade from "../assets/Logo-explanade.png"
 import logoProton from "../assets/Logo-proton.png"
 import logoTriumph from "../assets/Logo-triumph.png"
 
+import vector9 from "../assets/vector 9test.svg"
+
 const HomePage = () => {
+
+  let clientIndex = 0
   const clientsRow1 = [
-    logoUob,
-    logoToyota,
-    logoPosb,
-    logoSinglife,
-    logoAmway,
-    logoFitnessFirst,
-    logoSony,
-    logoXRvision,
-    logoCrown,
-    logoAIA,
-    logoWWF
+    {logo: logoUob, id: 0},
+    {logo: logoToyota, id: 1},
+    {logo: logoPosb, id: 2},
+    {logo: logoSinglife, id: 3},
+    {logo: logoAmway, id: 4},
+    {logo: logoFitnessFirst, id: 5},
+    {logo: logoSony, id: 6},
+    {logo: logoXRvision, id: 7},
+    {logo: logoCrown, id: 8},
+    {logo: logoAIA, id: 9},
+    {logo: logoWWF, id: 10}
   ]
 
   const clientsRow2 = [
-    logoMAS,
-    logoMaxis,
-    logoGrab,
-    logoDbs,
-    logoTreasure,
-    logoMicrosoft,
-    logoLogitech,
-    logoDreamscape,
-    logoStandardChartered,
-    logoSitebeat,
-    logoMizuho
+    {logo: logoMAS, id: 11},
+    {logo: logoMaxis, id: 12},
+    {logo: logoGrab, id: 13},
+    {logo: logoDbs, id: 14},
+    {logo: logoTreasure, id: 15},
+    {logo: logoMicrosoft, id: 16},
+    {logo: logoLogitech, id: 17},
+    {logo: logoDreamscape, id: 18},
+    {logo: logoStandardChartered, id: 19},
+    {logo: logoSitebeat, id: 20},
+    {logo: logoMizuho, id: 21}
   ]
 
   const clientsRow3 = [
-    logoCimb,
-    logoRhb,
-    logoNikkoAm,
-    logoMannHummel,
-    logoChubb,
-    logoNtuc,
-    logoTaylors,
-    logoExplanade,
-    logoProton,
-    logoTriumph,
-    logoProton
+    {logo: logoCimb, id: 22},
+    {logo: logoRhb, id: 23},
+    {logo: logoNikkoAm, id: 24},
+    {logo: logoMannHummel, id: 25},
+    {logo: logoChubb, id: 26},
+    {logo: logoNtuc, id: 27},
+    {logo: logoTaylors, id: 28},
+    {logo: logoExplanade, id: 29},
+    {logo: logoProton, id: 30},
+    {logo: logoTriumph, id: 31},
+    {logo: logoProton, id: 32}
   ]
 
   const [clientIndustry, setClientIndustry] = useState("Telco")
@@ -94,11 +98,12 @@ const HomePage = () => {
   const carouselContentLeftRef2 = useRef(null)
 
   useEffect(() => {
+    const container = carouselContainerRef.current
+    const content1 = carouselContentLeftRef1.current
+    const content2 = carouselContentLeftRef2.current
+    if (!container || !content1 || !content2) return
+
     const animateClientsLeft = () => {
-      const container = carouselContainerRef.current
-      const content1 = carouselContentLeftRef1.current
-      const content2 = carouselContentLeftRef2.current
-      if (!container || !content1 || !content2) return
 
       const containerWidth = container.offsetWidth
       const contentWidth = content1.scrollWidth
@@ -121,18 +126,36 @@ const HomePage = () => {
       
     }
 
-    animateClientsLeft()
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          animateClientsLeft()
+        }
+      },
+      {
+        root: null, //relative to viewport
+        threshold: 0.1, // triggers when 10% visible
+      }
+    )
+
+    observer.observe(container)
+
     window.addEventListener("resize", animateClientsLeft)
-    return () => window.removeEventListener("resize", animateClientsLeft)
+    
+    return () => {
+      window.removeEventListener("resize", animateClientsLeft)
+      observer.disconnect()
+    }
   })
 
   const carouselContentRightRef = useRef(null)
 
   useEffect(() => {
+    const container = carouselContainerRef.current
+    const content = carouselContentRightRef.current
+    if (!container || !content) return
+
     const animateClientsRight = () => {
-      const container = carouselContainerRef.current
-      const content = carouselContentRightRef.current
-      if (!container || !content) return
 
       const containerWidth = container.offsetWidth
       const contentWidth = content.scrollWidth
@@ -147,10 +170,27 @@ const HomePage = () => {
       
     }
 
-    animateClientsRight()
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          animateClientsRight()
+        }
+      },
+      {
+        root: null, //relative to viewport
+        threshold: 0.1, // triggers when 10% visible
+      }
+    )
+
+    observer.observe(container)
+
     window.addEventListener("resize", animateClientsRight)
-    return () => window.removeEventListener("resize", animateClientsRight)
-  })
+
+    return () => {
+      window.removeEventListener("resize", animateClientsRight)
+      observer.disconnect()
+    }
+  }, [])
 
   const [letsChatClicked, setLetsChatClicked] = useState(false)
 
@@ -284,7 +324,7 @@ const HomePage = () => {
       id="fliparoo"
       className="
       mt-[62px] mb-[240px] 
-      flex flex-col CHANGETHIS sm:flex-col 
+      flex flex-col-reverse sm:flex-col 
       gap-y-[244px]
       "
       >
@@ -874,13 +914,14 @@ const HomePage = () => {
           >
             {clientsRow1.map((client) => (
               <div
+              key={client.id}
               className="
               h-full 
               w-[123.87px] md:w-[160px]
               "
               >
                 <img 
-                src={client} 
+                src={client.logo} 
                 alt="client logo" 
                 className="w-full h-full object-cover"
                 />
@@ -900,13 +941,14 @@ const HomePage = () => {
           >
             {clientsRow2.map((client) => (
               <div
+              key={client.id}
               className="
               h-full 
               w-[123.87px] md:w-[160px]
               "
               >
                 <img 
-                src={client} 
+                src={client.logo} 
                 alt="client logo" 
                 className="w-full h-full object-cover"
                 />
@@ -925,13 +967,14 @@ const HomePage = () => {
           >
             {clientsRow3.map((client) => (
               <div
+              key={client.id}
               className="
               h-full 
               w-[123.87px] md:w-[160px]
               "
               >
                 <img 
-                src={client} 
+                src={client.logo} 
                 alt="client logo" 
                 className="w-full h-full object-cover"
                 />
@@ -943,7 +986,7 @@ const HomePage = () => {
       <div 
       id="contact"
       className="
-      my-[15rem] 
+      my-[15rem]
       w-full"
       >
         <Link
@@ -970,6 +1013,23 @@ const HomePage = () => {
           </button>
         </Link>
         
+      </div>
+      <div
+      className="
+      w-[586px]
+      h-[753px]
+      absolute top-[1251px] right-[868px]
+      blur-2xl
+      ">
+        <img 
+        src={vector9} 
+        alt="decoration" 
+        className="
+        w-full
+        h-full
+        object-cover
+        "
+        />
       </div>
     </>
   )

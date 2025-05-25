@@ -14,6 +14,7 @@ const Service = ({index, title, points}) => {
       </h4>
       {points.map((point) => (
         <p
+        key={index + point}
         className="pb-[1rem]"
         >
           {point}

@@ -42,7 +42,8 @@ const OfficeCard = ({region, city, phone, email, address}) => {
         ">
           {city}
         </p>
-        <div 
+        {phone ?
+          <div 
         className="
         flex
         mb-[0.75rem]
@@ -78,33 +79,41 @@ const OfficeCard = ({region, city, phone, email, address}) => {
               {phone}
           </p>
         </div>
-        {}
-        <div 
-        className="
-        flex
-        mb-[0.75rem]
-        gap-x-[0.5rem]
-        "
-        >
+        :
+          <></>
+        }
+        
+        {email ?
           <div 
           className="
-          size-[1.5rem]
-          min-w-[1.5rem]
-          text-[1rem]/[100%]
-          font-extrabold
-          text-go-cyan-1 md:text-go-gray-2
-          ">
-            @
+          flex
+          mb-[0.75rem]
+          gap-x-[0.5rem]
+          "
+          >
+            <div 
+            className="
+            size-[1.5rem]
+            min-w-[1.5rem]
+            text-[1rem]/[100%]
+            font-extrabold
+            text-go-cyan-1 md:text-go-gray-2
+            ">
+              @
+            </div>
+            <p
+            className="
+            text-[1rem]/[100%]
+            font-medium
+            text-go-white-2
+            ">
+                {email}
+            </p>
           </div>
-          <p
-          className="
-          text-[1rem]/[100%]
-          font-medium
-          text-go-white-2
-          ">
-              {email}
-          </p>
-        </div>
+        :
+          <></>
+        }
+        
         <div 
         className="
         flex
@@ -134,7 +143,7 @@ const OfficeCard = ({region, city, phone, email, address}) => {
           </div>
           <p
           className="
-          text-[1rem]/[100%]
+          text-[1rem]/[120%]
           font-medium
           text-go-white-2
           ">
@@ -144,8 +153,10 @@ const OfficeCard = ({region, city, phone, email, address}) => {
       </div>
     
       :
+      
       <div
       className="
+      hidden 926:block
       w-[382px]
       max-w-[87.5%]
       rounded-[1.5rem]

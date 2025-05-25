@@ -14,24 +14,24 @@ const Contact = () => {
     },
     {
       region: "ASIA",
-      city: "Kuala Lumpur",
-      phone: "+60 3 2789 9038",
-      email: "my@growthops.asia",
-      address: "Level 11, Block B, Plaza Zurich, No. 12, Jalan Gelenggang, Bukit Damansara, 50490 Kuala Lumpur, Malaysia"
+      city: "Manila",
+      phone: "+63 2 7586 4771",
+      email: "man@growthops.asia",
+      address: "KMC Solutions, 5F V Corporate Center, L.P. Leviste, Salcedo Village, Makati City 1227"
     },
     {
       region: "ASIA",
-      city: "Kuala Lumpur",
-      phone: "+60 3 2789 9038",
-      email: "my@growthops.asia",
-      address: "Level 11, Block B, Plaza Zurich, No. 12, Jalan Gelenggang, Bukit Damansara, 50490 Kuala Lumpur, Malaysia"
+      city: "Hong Kong",
+      phone: "+852 2805 9009",
+      email: "hkg@growthops.asia",
+      address: "29/F, Infinitus Plaza, 199 Des Voeux Road Central, Hong Kong"
     },
     {
       region: "ASIA",
-      city: "Kuala Lumpur",
-      phone: "+60 3 2789 9038",
-      email: "my@growthops.asia",
-      address: "Level 11, Block B, Plaza Zurich, No. 12, Jalan Gelenggang, Bukit Damansara, 50490 Kuala Lumpur, Malaysia"
+      city: "Singapore",
+      phone: "+65 6220 8383",
+      email: "sg@growthops.asia",
+      address: "1 Neil Rd, #02-02, Singapore 088804"
     },
     {
       region: "MIDDLE EAST",
@@ -63,7 +63,7 @@ const Contact = () => {
         </h2>
         <p
         className="
-        text-[2rem]/[137.5%]
+        text-[1.25rem]/[120%] md:text-[2rem]/[137.5%]
         font-medium
         w-[327px] md:w-[587px]
         mt-[1.5rem]
@@ -89,6 +89,7 @@ const Contact = () => {
             htmlFor="fullName"
             className="
             text-[0.875rem]/[100%]
+            text-go-gray-6
             font-semibold
             mb-[0.5rem]
             "
@@ -112,7 +113,9 @@ const Contact = () => {
           <div 
           className="
           flex
+          flex-col 926:flex-row
           gap-x-[2rem]
+          gap-y-[25px]
           mb-[2.5rem]
           "
           >
@@ -125,6 +128,7 @@ const Contact = () => {
               htmlFor="phoneNumber"
               className="
               text-[0.875rem]/[100%]
+              text-go-gray-6
               font-semibold
               mb-[0.5rem]
               "
@@ -134,6 +138,7 @@ const Contact = () => {
               <div 
               className="
               flex
+              w-full
               ">
                 <select 
                 name="countryCode" 
@@ -164,8 +169,8 @@ const Contact = () => {
                 rounded-e-[12px]
                 bg-go-gray-4
                 p-[1rem]
-                w-[287px]
-                max-w-[381px]
+                w-full 434:w-[287px]
+                
                 "
                 />
               </div>
@@ -180,6 +185,7 @@ const Contact = () => {
               htmlFor="workEmail"
               className="
               text-[0.875rem]/[100%]
+              text-go-gray-6
               font-semibold
               mb-[0.5rem]
               "
@@ -197,7 +203,7 @@ const Contact = () => {
               bg-go-gray-4
               p-[1rem]
               w-[381px]
-              max-w-[381px]
+              max-w-full
               "
               />
             </div>
@@ -217,6 +223,7 @@ const Contact = () => {
             flex
             flex-col md:flex-row
             justify-between
+            gap-y-[1.25rem]
             max-w-[687px]
             mb-[2.5rem]
             ">
@@ -509,6 +516,7 @@ const Contact = () => {
       <div 
       id="offices"
       className="
+      mb-[117px]
       "
       >
         <h3
@@ -521,17 +529,23 @@ const Contact = () => {
         mb-[73px]
         "
         >
-          OFFICES
+          OUR OFFICES
         </h3>
         <div 
         className="
+        w-full 926:w-[800px] 1366:w-full
+        mx-auto
         flex
+        flex-col 926:flex-row
         flex-wrap
+        items-center
         justify-between
-        gap-y-[68px]
+        gap-y-[56px] 926:gap-y-[68px]
+        gap-x-[10px]
         ">
           {offices.map((office) => (
             <OfficeCard 
+            key={office.region + "-" + office.city}
             region={office.region}
             city={office.city}
             phone={office.phone}
@@ -544,6 +558,7 @@ const Contact = () => {
       <div 
       id="closing-message"
       className="
+      mb-[55px]
       "
       >
         <h3
@@ -551,12 +566,20 @@ const Contact = () => {
         text-[35px]/[95.5%] sm:text-[2.75rem] md:text-[3.875rem] lg:text-[5.25rem]
         font-extrabold
         w-[90%] 
-        text-center 
-        m-auto"
+        450:text-center 
+        450:m-auto"
         >
-          KEEP IN TOUCH
+          KEEP <span className="hidden 450:inline">IN TOUCH</span>
         </h3>
-        
+        <h3 
+        className="
+        text-[35px]/[95.5%] sm:text-[2.75rem] md:text-[3.875rem] lg:text-[5.25rem]
+        font-extrabold
+        450:hidden
+        "
+        >
+          IN TOUCH
+        </h3>
       </div>
     </div>
   )
