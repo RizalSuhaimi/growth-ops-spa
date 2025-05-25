@@ -44,7 +44,9 @@ import logoExplanade from "../assets/Logo-explanade.png"
 import logoProton from "../assets/Logo-proton.png"
 import logoTriumph from "../assets/Logo-triumph.png"
 
-import vector9 from "../assets/vector 9test.svg"
+import vector9 from "../assets/vector 9.svg"
+import vector10 from "../assets/vector 10.svg"
+import vector11 from "../assets/vector 11.svg"
 
 const HomePage = () => {
 
@@ -200,65 +202,82 @@ const HomePage = () => {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    // Disable scrolling
+    document.body.style.overflow = "hidden";
+
+    const timeout = setTimeout(() => {
+      // Re-enable scrolling after 3.5s
+      document.body.style.overflow = "auto";
+    }, 3500);
+
+    // Cleanup in case the component unmounts early
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <>
       {/* This part is fixed and centered via portal  */}
       {mounted && createPortal(
-        <div 
-        id="anim"
-        className="relative z-30 w-full"
-        >
-          <div
-          className="
-          flex 
-          flex-col md:flex-row
-          justify-center
-          items-start md:items-end 
-          w-fit max-w-[88.3%]
-          mt-[474px] lg:mt-[337px]
-          mx-auto
-          "
+          <div 
+          id="anim"
+          className="relative z-30 w-full"
           >
-            <div>
-              <h1
-              className="
-              text-[53px]/[56px] sm:text-[4rem]/[100%] lg:text-[6.5rem]/[100%] 1366:text-[8rem]/[116px]
-              font-extrabold 
-              text-white
-              "
-              >
-                We’re
-              </h1>
-              <h1
-              className="
-              text-[53px]/[56px] sm:text-[4rem]/[100%] lg:text-[6.5rem]/[100%] 1366:text-[8rem]/[116px]
-              font-extrabold 
-              text-white
-              "
-              >
-                GrowthOps
-              </h1>
-            </div>
-            <h2
+            <div
             className="
-            bg-white 
-            text-go-cyan-2 
-            text-[2.5rem]/[100%] sm:text-[3.5rem]/[100%] lg:text-[4.5rem]/[100%] 1366:text-[6rem]/[116px]
-            font-extrabold 
-            py-[1.25rem] md:py-[1.25rem] 
-            px-[2.5rem] md:px-[4rem] 
-            w-fit 
-            h-fit 
-            rounded-[5rem] 
-            rotate-z-[-9.47deg] 
-            md:mx-[25.05px]
-            mt-[20px]
+            flex 
+            flex-col md:flex-row
+            justify-center
+            items-start md:items-end 
+            w-fit max-w-[88.3%]
+            mx-auto
+            z-10
+            absolute bottom-[64px] sm:bottom-[199px] left-[50%]
+            transform translate-x-[-50%]
             "
             >
-              Asia
-            </h2>
+              <div>
+                <h1
+                className="
+                text-[53px]/[56px] sm:text-[4rem]/[100%] lg:text-[6.5rem]/[100%] 1366:text-[8rem]/[116px]
+                font-extrabold 
+                text-white
+                "
+                >
+                  We’re
+                </h1>
+                <h1
+                className="
+                text-[53px]/[56px] sm:text-[4rem]/[100%] lg:text-[6.5rem]/[100%] 1366:text-[8rem]/[116px]
+                font-extrabold 
+                text-white
+                "
+                >
+                  GrowthOps
+                </h1>
+              </div>
+              <h2
+              className="
+              bg-white 
+              text-go-cyan-2 
+              text-[2.5rem]/[100%] sm:text-[3.5rem]/[100%] lg:text-[4.5rem]/[100%] 1366:text-[6rem]/[116px]
+              font-extrabold 
+              py-[1.25rem] md:py-[1.25rem] 
+              px-[2.5rem] md:px-[4rem] 
+              w-fit 
+              h-fit 
+              rounded-[5rem] 
+              rotate-z-[-9.47deg] 
+              md:mx-[25.05px]
+              mt-[20px]
+              "
+              >
+                Asia
+              </h2>
+            </div>
+            
           </div>
-        </div>,
+        ,
         document.body
       )}
 
@@ -330,7 +349,9 @@ const HomePage = () => {
       >
         <div 
         id="mission"
-        className=""
+        className="
+        relative
+        "
         >
           <div
           className="
@@ -387,6 +408,40 @@ const HomePage = () => {
           >
             GrowthOps Asia
           </h2>
+          <div
+          className="
+          w-[293px] md:w-[586px]
+          h-[753px]
+          absolute top-[0px] left-[-20px]
+          blur-2xl
+          ">
+            <img 
+            src={vector9} 
+            alt="decoration" 
+            className="
+            w-full
+            h-full
+            object-cover
+            "
+            />
+          </div>
+          <div
+          className="
+          w-[156px] md:w-[313px]
+          h-[1088px]
+          absolute top-[0px] right-[-20px]
+          blur-2xl
+          ">
+            <img 
+            src={vector10} 
+            alt="decoration" 
+            className="
+            w-full
+            h-full
+            object-cover
+            "
+            />
+          </div>
         </div>
         <div 
         id="services"
@@ -1014,15 +1069,16 @@ const HomePage = () => {
         </Link>
         
       </div>
+      
       <div
       className="
-      w-[586px]
-      h-[753px]
-      absolute top-[1251px] right-[868px]
+      w-[376px] md:w-[753.66px]
+      h-[753.12px]
+      absolute bottom-[1650px] right-[-160px]
       blur-2xl
       ">
         <img 
-        src={vector9} 
+        src={vector11} 
         alt="decoration" 
         className="
         w-full

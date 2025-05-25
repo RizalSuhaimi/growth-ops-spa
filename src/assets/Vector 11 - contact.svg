@@ -6,7 +6,6 @@
 <filter id="filter0_f_63_578" x="0" y="0" width="1061.66" height="1061.12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="77" result="effect1_foregroundBlur_63_578"/>
 </filter>
 <linearGradient id="paint0_linear_63_578" x1="126.81" y1="154.5" x2="839.31" y2="848" gradientUnits="userSpaceOnUse">
 <stop stop-color="#E9FFFA" stop-opacity="0.16"/>

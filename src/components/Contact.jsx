@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import OfficeCard from './OfficeCard'
 
+import vector9 from "../assets/vector 9 - contact.svg"
+import vector10 from "../assets/vector 10 - contact.svg"
+import vector11 from "../assets/vector 11 - contact.svg"
+import vector12 from "../assets/vector 12 - contact.svg"
+
 const Contact = () => {
   const [count, setCount] = useState(0)
 
@@ -52,6 +57,7 @@ const Contact = () => {
       className="
       mt-[58px]
       mb-[127px]
+      relative
       "
       >
         <h2 className="
@@ -78,6 +84,10 @@ const Contact = () => {
         onSubmit={(e) => {
           e.preventDefault()
         }}
+        className="
+        relative
+        z-10
+        "
         >
           <div
           className="
@@ -511,7 +521,78 @@ const Contact = () => {
           "
           />
         </form>
-        
+        <div
+        className="
+        w-[550px] md:w-[1099px]
+        h-[753px]
+        absolute top-[458px] left-[-40px]
+        blur-2xl 
+        z-0
+        ">
+          <img 
+          src={vector9} 
+          alt="decoration" 
+          className="
+          w-full
+          h-full
+          object-cover
+          "
+          />
+        </div>
+        <div
+        className="
+        w-[376px] md:w-[753.66px]
+        h-[753.12px]
+        absolute top-[-19px] right-[-40px]
+        blur-2xl
+        z-0
+        ">
+          <img 
+          src={vector10} 
+          alt="decoration" 
+          className="
+          w-full
+          h-full
+          object-cover
+          "
+          />
+        </div>
+        <div
+        className="
+        w-[250px] md:w-[500px]
+        h-[753.12px]
+        absolute top-[591px] right-[-40px]
+        blur-2xl
+        z-0
+        ">
+          <img 
+          src={vector11} 
+          alt="decoration" 
+          className="
+          w-full
+          h-full
+          object-cover
+          "
+          />
+        </div>
+        <div
+        className="
+        w-[376px] md:w-[753.66px]
+        h-[753.12px]
+        absolute top-[763px] left-[-20px]
+        blur-2xl
+        z-0
+        ">
+          <img 
+          src={vector12} 
+          alt="decoration" 
+          className="
+          w-full
+          h-full
+          object-cover
+          "
+          />
+        </div>
       </div>
       <div 
       id="offices"
@@ -538,7 +619,7 @@ const Contact = () => {
         flex
         flex-col 926:flex-row
         flex-wrap
-        items-center
+        items-center 926:items-start
         justify-between
         gap-y-[56px] 926:gap-y-[68px]
         gap-x-[10px]
@@ -581,6 +662,7 @@ const Contact = () => {
           IN TOUCH
         </h3>
       </div>
+      
     </div>
   )
 }

@@ -41,11 +41,13 @@
     left: 50%;
     background-color: #33FFF3;
     width: 1366px;
-    height: 768px;
+    height: 81.3%;
     transform: translate(-50%, -50%);
+    box-sizing: content-box;
+    border: 90px solid black;
     animation: moveUpOut 1.5s linear forwards;
     animation-delay: 2s; 
-    display: none;
+    /* display: none; */
 }
 
 @keyframes moveUpOut {
